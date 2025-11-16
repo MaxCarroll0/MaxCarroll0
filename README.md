@@ -13,4 +13,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=MaxCarroll0&hide=stars)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MaxCarroll0&hide=tex)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MaxCarroll0) <!-- append &hide=tex -->
