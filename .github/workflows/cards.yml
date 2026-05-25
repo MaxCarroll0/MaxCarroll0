@@ -1,17 +1,13 @@
 name: Update README cards
-
 on:
   schedule:
     - cron: "0 0 * * *" # Runs once daily at midnight
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v6
 
@@ -19,17 +15,34 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true
+          # count_private + include_all_commits require a PAT with repo scope
+          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&include_all_commits=true
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
 
       - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: lowlighter/metrics@latest
         with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
+          filename: profile/top-langs.svg
+          base: ""
+          output_action: none
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: bytes-size, percentage, lines
+          plugin_languages_limit: 0
+          plugin_languages_threshold: 0%
+          plugin_languages_other: yes
+          plugin_languages_colors: github
+          plugin_languages_recent_load: 300
+          plugin_languages_recent_days: 14
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 7.5
+          repositories_affiliations: owner, collaborator, organization_member
+          plugin_languages_indepth_custom: |
+            hazelgrove/hazel@witnesses-type-slicing
+          commits_authoring: ${{ github.repository_owner }}
 
       - name: Generate pin card
         uses: readme-tools/github-readme-stats-action@v1
@@ -37,7 +50,7 @@ jobs:
           card: pin
           options: username=readme-tools&repo=github-readme-stats
           path: profile/pin-readme-tools-github-readme-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
 
       - name: Commit cards
         run: |
