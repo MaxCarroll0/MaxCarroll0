@@ -25,7 +25,6 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           filename: profile/metrics.svg
           base: ""
-          output_action: none
           config_order: languages, lines, stars, habits
           plugin_languages: yes
           plugin_languages_indepth: yes
