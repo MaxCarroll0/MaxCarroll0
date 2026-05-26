@@ -57,7 +57,7 @@ jobs:
           plugin_languages_recent_days: 90
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 15
+          repositories: 1000
           repositories_affiliations: owner
           plugin_languages_indepth_custom: hazelgrove/hazel@asymmetric-unknown-type, hazelgrove/hazel@type-slicing, Extreme-Kayaking/kayak-hull-optimisation, Talking-Music/Talking-Music
           commits_authoring: ${{ github.repository_owner }}, 133233123+MaxCarroll0@users.noreply.github.com, mjvcarroll@gmail.com, mjvcaroll@gmail.com
-          
