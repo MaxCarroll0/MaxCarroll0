@@ -56,9 +56,8 @@ jobs:
           plugin_languages_recent_days: 14
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 15
-          repositories_affiliations: owner, collaborator, organization_member
-          plugin_languages_indepth_custom: |
-            hazelgrove/hazel@witnesses-type-slicing:dev..witnesses-type-slicing
+          repositories_affiliations: owner, collaborator
+          plugin_languages_indepth_custom: hazelgrove/hazel@witnesses-type-slicing, Extreme-Kayaking/kayak-hull-optimisation
           commits_authoring: ${{ github.repository_owner }}, mjvcarroll@gmail.com
           plugin_lines: yes
           plugin_lines_sections: base, repositories
