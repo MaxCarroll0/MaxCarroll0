@@ -86,15 +86,22 @@ function render.metric(result, opts)
 
     local segs, blocks = {}, {}
     for i, r in ipairs(g.rows) do
-      local color = langgroups.color(r.lang)
+      local color = r.other and GREY or langgroups.color(r.lang)
       segs[#segs + 1] = { frac = g.total > 0 and r.lines / g.total or 0, color = color }
       local bar, fill = svg.rowbar(r.pct / 100, color, bar_w, 12)
       local bar_path = ("%s/bar/%s-%d.svg"):format(dir, (color:gsub("#", "")), fill)
       files[bar_path] = bar
+      local dot_path = ("%s/dot/%s.svg"):format(dir, (color:gsub("#", "")))
+      files[dot_path] = svg.dot(color)
 
-      local name = util.esc(r.lang) .. string.rep(NBSP, name_w - util.dwidth(r.lang))
-      local url = home_url(r.lang, urls, overrides)
-      name = url and ('<a href="%s"><code>%s</code></a>'):format(util.esc(url), name) or ("<code>" .. name .. "</code>")
+      -- link wraps only the language text (inside <code>); padding follows, so the underline stops at the name.
+      local url = not r.other and home_url(r.lang, urls, overrides)
+      local text = url and ('<a href="%s">%s</a>'):format(util.esc(url), util.esc(r.lang)) or util.esc(r.lang)
+      local name = ('<img src="%s" width="10" height="10"> <code>%s%s</code>'):format(
+        dot_path,
+        text,
+        string.rep(NBSP, name_w - util.dwidth(r.lang))
+      )
       local summary = ('%s%s%s<img src="%s" height="11">%s%s'):format(
         name,
         code_pad(fmt[i].cnt, 2 + count_w),
@@ -104,7 +111,7 @@ function render.metric(result, opts)
         code_pad(fmt[i].pct, pct_w)
       )
 
-      local bd = breakdown[r.lang]
+      local bd = not r.other and breakdown[r.lang]
       if bd and #bd.rows > 0 then
         blocks[#blocks + 1] = ("<details><summary>%s</summary>\n%s</details>"):format(
           summary,

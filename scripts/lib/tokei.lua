@@ -7,8 +7,12 @@ local tokei = {}
 
 local SKIP = { Total = true }
 
-function tokei.analyze(dir)
-  local cmd = "cd " .. util.shq(dir) .. " && tokei --files --output json . 2>/dev/null"
+function tokei.analyze(dir, excludes)
+  local ex = ""
+  for _, g in ipairs(excludes or {}) do
+    ex = ex .. " --exclude " .. util.shq(g)
+  end
+  local cmd = "cd " .. util.shq(dir) .. " && tokei --files" .. ex .. " --output json . 2>/dev/null"
   local out, code = util.run(cmd)
   if not out or out == "" then
     return nil, "tokei produced no output (code " .. code .. ")"

@@ -9,7 +9,7 @@ local github = require("lib.github")
 local repos = require("lib.repos")
 local tokei = require("lib.tokei")
 local blame = require("lib.blame")
-local churn = require("lib.churn")
+local orgtangle = require("lib.orgtangle")
 local aggregate = require("lib.aggregate")
 local langgroups = require("lib.langgroups")
 local langurls = require("lib.langurls")
@@ -39,11 +39,14 @@ local email_set = util.email_set(emails)
 local flags = config.counting.blame_flags or "-w"
 local recent_days = config.recent.days or 90
 local token = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN") or os.getenv("GH_PAT")
+local excludes = config.counting.exclude
+local cutoff = os.time() - recent_days * 86400 -- author-time floor: lines you wrote inside the window
+local since_str = recent_days .. " days ago"
 
 local alltime, recent = {}, {}
 local top_contrib, recent_contrib = {}, {} -- lang -> repo label -> lines, for the per-row dropdowns
 local is_private = {} -- repo label -> bool
-local seen, seen_sha = {}, {}
+local seen = {}
 local n_owned, n_ext = 0, 0
 
 local function add_contrib(store, lang, label, n)
@@ -74,14 +77,32 @@ if config.owned.enabled and selected("owned") then
         is_private[label] = r.private == true
         local ok, e = pcall(function()
           local prep = assert(repos.prepare_owned(r, token, config.work_dir, recent_days))
-          local tk = assert(tokei.analyze(prep.path))
+          local tk = assert(tokei.analyze(prep.path, excludes))
+          local org = orgtangle.scan(prep.path, tk.file_lang)
           for lang, s in pairs(tk.lang_totals) do
-            local n = s.code + s.comments
+            if lang ~= "Org" then -- .org reattributed below: tangled src blocks count as their own language
+              local n = s.code + s.comments
+              alltime[lang] = (alltime[lang] or 0) + n
+              add_contrib(top_contrib, lang, label, n)
+            end
+          end
+          for lang, n in pairs(org.totals) do
             alltime[lang] = (alltime[lang] or 0) + n
             add_contrib(top_contrib, lang, label, n)
           end
           local rec_sink = {}
-          churn.collect(prep.path, emails, recent_days, tk.file_lang, seen_sha, rec_sink)
+          blame.attribute({
+            path = prep.path,
+            emails = emails,
+            email_set = email_set,
+            flags = flags,
+            file_lang = tk.file_lang,
+            org_lines = org.lines,
+            seen = seen,
+            cutoff = cutoff,
+            since = since_str,
+            recent = rec_sink,
+          })
           for lang, n in pairs(rec_sink) do
             recent[lang] = (recent[lang] or 0) + n
             add_contrib(recent_contrib, lang, label, n)
@@ -107,9 +128,20 @@ for _, g in ipairs(repos.group_external(config.external)) do
       local prep = assert(repos.prepare_external(g.owner, g.repo, g.refs, token, config.work_dir))
       local at_sink, rec_sink = {}, {}
       for _, unit in ipairs(prep.units) do
-        local tk = assert(tokei.analyze(unit.path))
-        local touched, blamed = blame.attribute(unit.path, emails, email_set, flags, tk.file_lang, seen, at_sink)
-        churn.collect(unit.path, emails, recent_days, tk.file_lang, seen_sha, rec_sink)
+        local tk = assert(tokei.analyze(unit.path, excludes))
+        local org = orgtangle.scan(unit.path, tk.file_lang)
+        local touched, blamed = blame.attribute({
+          path = unit.path,
+          emails = emails,
+          email_set = email_set,
+          flags = flags,
+          file_lang = tk.file_lang,
+          org_lines = org.lines,
+          seen = seen,
+          cutoff = cutoff,
+          alltime = at_sink,
+          recent = rec_sink,
+        })
         util.log("  %s@%s: %d file(s) touched, %d blamed", key, unit.ref, touched, blamed)
       end
       for lang, n in pairs(at_sink) do
@@ -137,6 +169,7 @@ local gopts = {
   hide = config.languages.hide,
   group_order = config.groups.order,
   per_group = config.groups.per_group,
+  other_label = config.groups.other_label,
   group_of = function(l)
     return langgroups.group_of(l, config.groups)
   end,

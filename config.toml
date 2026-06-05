@@ -18,6 +18,13 @@ include_archived = false
 [counting]
 blame_flags = "-w" # add "-M -C" to follow moved/copied lines
 dedupe_shared_history = true
+# Build/generated paths dropped from every metric (tokei --exclude globs). Repos are source-only (Nix builds
+# out-of-tree), so this is mostly a safety net; add committed generated files here if you want them out too.
+exclude = [
+  "_build", "dist", "target", "node_modules", "vendor", ".dart_tool", "__pycache__",
+  "*.min.js", "*.min.css", "*.pb.go", "*.g.dart", "*.freezed.dart",
+  "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "Cargo.lock",
+]
 
 [recent]
 days = 90
@@ -28,15 +35,17 @@ hide = ["SVG", "Plain Text", "Autoconf"]
 [languages.merge]
 # tokei folds .re/.rei into OCaml; relabel to show both.
 "OCaml" = "OCaml/Reason"
+# fold tokei's header split and the bibliography sub-language into their parent
+"C Header" = "C"
+"C++ Header" = "C++"
+"BibTeX" = "TeX"
 
 [languages.urls]
 # Homepage links come from scripts/lib/langurls.lua (generated from DBpedia/Wikidata by gen-langurls.lua).
 # These per-display-name overrides win over it: data formats those sources lack a homepage for, plus
 # nicer targets than the generated ones (e.g. cppreference over the ISO paywall).
 "C" = "https://en.cppreference.com/w/c"
-"C Header" = "https://en.cppreference.com/w/c"
 "C++" = "https://isocpp.org"
-"C++ Header" = "https://isocpp.org"
 "Org" = "https://orgmode.org"
 "Shell" = "https://www.gnu.org/software/bash/"
 "HTML" = "https://html.spec.whatwg.org/"
@@ -54,7 +63,8 @@ private_label = "Private"
 [groups]
 # Languages are classified by GitHub Linguist's `type` (see lib/langgroups.lua).
 order = ["Programming", "Prose", "Configs / Data"]
-per_group = 12
+per_group = 12        # max languages shown per class; the rest fold into one "Other" row
+other_label = "Other"
 
 [groups.overrides]
 "Nix" = "Configs / Data"

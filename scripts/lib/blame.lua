@@ -1,13 +1,17 @@
 -- scripts/lib/blame.lua: attribute final-state non-blank lines to the user via git blame, deduped by origin.
+-- Tallies two buckets: all-time (your email) and recent (your email AND author-time >= cutoff, i.e. lines you wrote
+-- inside the window that still survive). For .org files a per-line language map reattributes tangled src blocks.
 
 local util = require("lib.util")
 
 local blame = {}
 
-local function touched_files(path, emails)
-  local cmd = ("git -C %s log --fixed-strings %s --name-only --diff-filter=d --pretty=format: HEAD -- 2>/dev/null"):format(
+local function touched_files(path, emails, since)
+  local sincearg = since and (" --since=" .. util.shq(since)) or ""
+  local cmd = ("git -C %s log --fixed-strings %s%s --name-only --diff-filter=d --pretty=format: HEAD -- 2>/dev/null"):format(
     util.shq(path),
-    util.author_flags(emails)
+    util.author_flags(emails),
+    sincearg
   )
   local out = util.run(cmd) or ""
   local set, list = {}, {}
@@ -21,7 +25,8 @@ local function touched_files(path, emails)
 end
 
 -- `seen` keys by origin commit:path:line, so shared-history lines across units count once.
-local function count_file(path, file, flags, email_set, seen)
+-- `org` (optional) maps a final line number -> language; otherwise the file's single `deflang` is used.
+local function count_file(path, file, flags, email_set, seen, cutoff, deflang, org, alltime, recent)
   local cmd = ("git -C %s blame %s --line-porcelain HEAD -- %s 2>/dev/null"):format(
     util.shq(path),
     flags,
@@ -32,17 +37,27 @@ local function count_file(path, file, flags, email_set, seen)
     return 0
   end
 
-  local n, sha, orig, mail, ofile = 0
+  local n = 0
+  local sha, orig, final, mail, atime, ofile
   for line in (out .. "\n"):gmatch("(.-)\n") do
-    local hsha, horig = line:match("^(%x+) (%d+) %d+")
+    local hsha, horig, hfinal = line:match("^(%x+) (%d+) (%d+)")
     if hsha and #hsha >= 7 then
-      sha, orig, mail, ofile = hsha, horig, nil, file
+      sha, orig, final, mail, atime, ofile = hsha, horig, tonumber(hfinal), nil, nil, file
     elseif line:byte(1) == 9 then
       if mail and email_set[mail] and line:sub(2):match("%S") then
         local key = sha .. ":" .. ofile .. ":" .. orig
         if not seen[key] then
           seen[key] = true
-          n = n + 1
+          local lang = (org and org[final]) or deflang
+          if lang then
+            if alltime then
+              alltime[lang] = (alltime[lang] or 0) + 1
+            end
+            if recent and atime and atime >= cutoff then
+              recent[lang] = (recent[lang] or 0) + 1
+            end
+            n = n + 1
+          end
         end
       end
     else
@@ -50,9 +65,14 @@ local function count_file(path, file, flags, email_set, seen)
       if m then
         mail = m:lower()
       else
-        local fn = line:match("^filename (.+)$")
-        if fn then
-          ofile = fn
+        local at = line:match("^author%-time (%d+)$")
+        if at then
+          atime = tonumber(at)
+        else
+          local fn = line:match("^filename (.+)$")
+          if fn then
+            ofile = fn
+          end
         end
       end
     end
@@ -60,16 +80,18 @@ local function count_file(path, file, flags, email_set, seen)
   return n
 end
 
-function blame.attribute(path, emails, email_set, flags, file_lang, seen, alltime)
-  local files = touched_files(path, emails)
+-- p: { path, emails, email_set, flags, file_lang, org_lines?, seen, cutoff, since?, alltime?, recent? }
+-- `since` limits the scan to files touched in the window (cheap recent-only pass for owned repos).
+function blame.attribute(p)
+  local files = touched_files(p.path, p.emails, p.since)
   local blamed = 0
   for _, file in ipairs(files) do
-    local lang = file_lang[file]
-    if lang then
-      blamed = blamed + 1
-      local n = count_file(path, file, flags, email_set, seen)
+    local org = p.org_lines and p.org_lines[file]
+    local deflang = p.file_lang[file]
+    if deflang or org then
+      local n = count_file(p.path, file, p.flags, p.email_set, p.seen, p.cutoff, deflang, org, p.alltime, p.recent)
       if n > 0 then
-        alltime[lang] = (alltime[lang] or 0) + n
+        blamed = blamed + 1
       end
     end
   end

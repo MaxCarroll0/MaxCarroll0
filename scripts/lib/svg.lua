@@ -62,4 +62,11 @@ function svg.stacked(title, title_color, segments, w)
   ):format(w, h, title_tag, by, w, bh, table.concat(bars))
 end
 
+-- Small filled circle used as a colour swatch before a language name.
+function svg.dot(color)
+  return ('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="5" fill="%s"/></svg>'):format(
+    color
+  )
+end
+
 return svg

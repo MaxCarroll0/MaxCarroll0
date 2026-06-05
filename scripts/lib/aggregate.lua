@@ -57,9 +57,20 @@ function aggregate.grouped(map, opts)
         r.pct = b.total > 0 and r.lines / b.total * 100 or 0
       end
       if opts.per_group and #b.rows > opts.per_group then
-        local t = {}
+        local t, other = {}, 0
         for i = 1, opts.per_group do
           t[i] = b.rows[i]
+        end
+        for i = opts.per_group + 1, #b.rows do
+          other = other + b.rows[i].lines
+        end
+        if other > 0 then
+          t[#t + 1] = {
+            lang = opts.other_label or "Other",
+            lines = other,
+            pct = b.total > 0 and other / b.total * 100 or 0,
+            other = true,
+          }
         end
         b.rows = t
       end

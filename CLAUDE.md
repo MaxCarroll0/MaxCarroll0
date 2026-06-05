@@ -39,15 +39,21 @@ to JSON and decodes with `lib/json.lua`; there is no hand-rolled TOML parser.
 
 ## How counting works (the non-obvious parts)
 
-Two metrics use **different signals on purpose**, because owned repos are not blamed:
+Both tables count lines that **survive in the final tree**; they differ in window and (owned vs external) signal:
 
 - **Top Languages (all-time):** owned repos use `tokei` `code+comments` of the final tree (wholesale,
   you own them); external repos count lines attributed to your `emails` via `git blame -w
   --line-porcelain`, non-blank lines only, **deduped by originating commit** so the three shared-history
   `hazel` branches do not double-count.
-- **Recently Used (last N days):** *all* repos count lines you **added** in commits within the window
-  (`git log --author --since --numstat`), deduped by SHA. This is churn, so it can exceed the all-time
-  counts; the column is "Added". The README's "last 90 days" text mirrors `recent.days`.
+- **Recently Used (last N days):** lines you **authored within the window that still survive** — the same
+  blame, kept only where a line's `author-time >= now - recent.days`, so the counts are a subset of all-time.
+  Owned repos (otherwise unblamed) get a cheap windowed blame over just the files you touched in the window;
+  their `--shallow-since(N+14)` clone covers it. The README's "last 90 days" mirrors `recent.days`.
+
+`tokei` runs with `--exclude` globs from `[counting].exclude`, which shrinks both its totals and the `file_lang`
+map that gates blame, so build/generated files drop from every metric. Literate `.org` files are reattributed by
+`lib/orgtangle.lua`: `#+begin_src <lang>` blocks count as their language (mainly Emacs Lisp), prose as `Org`,
+line-accurately (blame carries final line numbers; owned all-time replaces tokei's `Org` with the parse).
 
 Languages are classified into **Programming / Prose / Configs-Data** and coloured by GitHub Linguist.
 `lib/linguist.lua` (a `{lang = {t=type, c=color}}` table) is GENERATED from Linguist's `languages.yml` by
@@ -61,12 +67,14 @@ display name (data formats those sources lack, plus nicer targets).
 The language classes are laid into columns (per `[output].columns`; currently two `<td>`s). Per class,
 `lib/svg.lua` builds a stacked proportion bar above the rows and, for each row, an outlined-box bar filled to
 the within-group share, both coloured by the language's Linguist colour so a row's bar and its stacked segment
-match. Each row is a `<details>` whose `<summary>` (homepage-linked name, lines, colour bar, %) is
-monospace-aligned with `<code>` + `&nbsp;` padding, and whose body is a **per-project breakdown**: one row per
-public repo (linked to GitHub) plus a single "Private" row, each with a grey bar showing that project's share
-of the language total. The breakdown reuses per-repo contributions that `stats.lua` keeps alongside the totals
-(`aggregate.breakdown`). `lib/render.lua` emits the HTML plus the SVGs (written under `assets/`, re-derived and
-pruned each run); `lib/mdtable.lua` now only aligns the Totals table.
+match. Each row is a `<details>` whose `<summary>` is a colour-dot swatch, the homepage-linked name (the `<a>`
+wraps only the text, inside the `<code>`, so the underline stops at the name), the line count, a colour bar, and
+the %, monospace-aligned with `<code>` + `&nbsp;` padding; its body is a **per-project breakdown**: one row per
+public repo (linked to GitHub) plus a single "Private" row, each with a grey bar showing that project's share of
+the language total. Languages past `[groups].per_group` fold into one grey, non-expandable `Other` row. The
+breakdown reuses per-repo contributions that `stats.lua` keeps alongside the totals (`aggregate.breakdown`).
+`lib/render.lua` emits the HTML plus the SVGs (written under `assets/`, re-derived and pruned each run);
+`lib/mdtable.lua` now only aligns the Totals table.
 
 Per-repo work is `pcall`-isolated. External repos are full-cloned (blame needs history); multiple refs of
 one repo share a clone via `git worktree`. Owned repos use `--shallow-since`. All clones disable git-lfs
@@ -75,12 +83,13 @@ filters so tokei is not blocked on (and does not fetch) LFS binaries.
 ## Module map (`scripts/`)
 
 `stats.lua` orchestrates. `lib/`: `conf` (TOML to JSON), `json` (decoder), `github` (owned discovery via
-`gh api --paginate --slurp`), `repos` (clone/worktree), `tokei` (run + parse: per-file stats live in
-`reports[].name`/`.stats`, skip the `Total` key), `blame` (attribution + dedup), `churn` (recent),
-`langgroups` plus generated `linguist` (classification + colour) and generated `langurls` (homepage links),
-`aggregate` (group/sort/cap + within-group %, plus per-project `breakdown`), `svg` (per-row + stacked bar
-SVGs), `render` (columnar HTML: per-language `<details>` dropdowns with homepage links + per-project breakdown,
-the SVG files, totals), `mdtable` (align the Totals Markdown), `inject` (marker replacement), `util`.
+`gh api --paginate --slurp`), `repos` (clone/worktree), `tokei` (run with `--exclude` + parse: per-file stats
+live in `reports[].name`/`.stats`, skip the `Total` key), `blame` (all-time + windowed-recent attribution,
+dedup, `.org` line reattribution), `orgtangle` (`.org` src-block split), `langgroups` plus generated `linguist`
+(classification + colour) and generated `langurls` (homepage links), `aggregate` (group/sort, `Other` fold +
+within-group %, plus per-project `breakdown`), `svg` (per-row + stacked bars + colour dots), `render` (columnar
+HTML: per-language `<details>` with colour dot, homepage link, per-project breakdown, `Other` row, the SVG
+files, totals), `mdtable` (align the Totals Markdown), `inject` (marker replacement), `util`.
 `require` paths assume the run starts at the repo root. Generators: `gen-linguist.lua`, `gen-langurls.lua`.
 
 ## CI
