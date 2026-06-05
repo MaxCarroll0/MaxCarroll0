@@ -2,7 +2,7 @@
 
 ![Stats](./profile/stats.svg)
 
-![Metrics](./profile/metrics.svg)
+![Top Languages](./profile/top-langs.svg)
 
 ![Pinned](./profile/pin-readme-tools-github-readme-stats.svg)
 
