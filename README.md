@@ -11,8 +11,8 @@
 | Metric           |  Value |
 | :--------------- | -----: |
 | Languages        |     50 |
-| Lines (all-time) | 96,973 |
-| Added (90d)      | 88,084 |
+| Lines (all-time) | 97,206 |
+| Added (90d)      | 88,438 |
 | Repositories     |     27 |
 
 <!-- TOTALS:END -->
@@ -30,12 +30,12 @@
 | Language     |  Lines | Share                                                  |
 | :----------- | -----: | :----------------------------------------------------- |
 | C++ Header   | 15,746 | <img src="assets/bar/c9510c-17.svg" height="11"> 19.6% |
-| Agda         | 13,682 | <img src="assets/bar/315665-15.svg" height="11"> 17.1% |
-| OCaml/Reason | 13,357 | <img src="assets/bar/ef7a08-15.svg" height="11"> 16.7% |
+| Agda         | 13,682 | <img src="assets/bar/315665-15.svg" height="11"> 17.0% |
+| OCaml/Reason | 13,386 | <img src="assets/bar/ef7a08-15.svg" height="11"> 16.7% |
 | Java         | 12,922 | <img src="assets/bar/b07219-14.svg" height="11"> 16.1% |
 | Haskell      |  7,016 | <img src="assets/bar/5e5086-8.svg" height="11"> 8.7%   |
 | BASH         |  4,172 | <img src="assets/bar/1a7f37-5.svg" height="11"> 5.2%   |
-| Lua          |  3,869 | <img src="assets/bar/000080-4.svg" height="11"> 4.8%   |
+| Lua          |  3,981 | <img src="assets/bar/000080-4.svg" height="11"> 5.0%   |
 | C Header     |  2,079 | <img src="assets/bar/1a7f37-2.svg" height="11"> 2.6%   |
 | C            |  2,049 | <img src="assets/bar/555555-2.svg" height="11"> 2.6%   |
 | Python       |  1,190 | <img src="assets/bar/3572A5-1.svg" height="11"> 1.5%   |
@@ -49,9 +49,9 @@
 
 | Language | Lines | Share                                                  |
 | :------- | ----: | :----------------------------------------------------- |
-| TeX      | 6,982 | <img src="assets/bar/3D6117-47.svg" height="11"> 52.9% |
-| Markdown | 3,920 | <img src="assets/bar/083fa1-26.svg" height="11"> 29.7% |
-| CSS      | 1,684 | <img src="assets/bar/663399-11.svg" height="11"> 12.8% |
+| TeX      | 6,982 | <img src="assets/bar/3D6117-46.svg" height="11"> 52.5% |
+| Markdown | 4,012 | <img src="assets/bar/083fa1-27.svg" height="11"> 30.2% |
+| CSS      | 1,684 | <img src="assets/bar/663399-11.svg" height="11"> 12.7% |
 | Org      |   559 | <img src="assets/bar/77aa99-4.svg" height="11"> 4.2%   |
 | HTML     |    60 | <img src="assets/bar/e34c26-0.svg" height="11"> 0.5%   |
 
@@ -87,11 +87,11 @@
 
 | Language   |  Lines | Share                                                  |
 | :--------- | -----: | :----------------------------------------------------- |
-| Agda       | 27,526 | <img src="assets/bar/315665-34.svg" height="11"> 38.7% |
+| Agda       | 27,526 | <img src="assets/bar/315665-34.svg" height="11"> 38.6% |
 | C++ Header | 17,937 | <img src="assets/bar/c9510c-22.svg" height="11"> 25.2% |
 | Haskell    |  9,665 | <img src="assets/bar/5e5086-12.svg" height="11"> 13.6% |
 | BASH       |  4,548 | <img src="assets/bar/1a7f37-6.svg" height="11"> 6.4%   |
-| Lua        |  4,338 | <img src="assets/bar/000080-5.svg" height="11"> 6.1%   |
+| Lua        |  4,504 | <img src="assets/bar/000080-6.svg" height="11"> 6.3%   |
 | C          |  2,152 | <img src="assets/bar/555555-3.svg" height="11"> 3.0%   |
 | C Header   |  1,736 | <img src="assets/bar/1a7f37-2.svg" height="11"> 2.4%   |
 | Isabelle   |  1,352 | <img src="assets/bar/FEFE00-2.svg" height="11"> 1.9%   |
@@ -107,10 +107,10 @@
 
 | Language | Lines | Share                                                  |
 | :------- | ----: | :----------------------------------------------------- |
-| TeX      | 5,397 | <img src="assets/bar/3D6117-36.svg" height="11"> 41.3% |
-| Markdown | 5,113 | <img src="assets/bar/083fa1-34.svg" height="11"> 39.2% |
-| CSS      | 1,697 | <img src="assets/bar/663399-11.svg" height="11"> 13.0% |
-| Org      |   798 | <img src="assets/bar/77aa99-5.svg" height="11"> 6.1%   |
+| TeX      | 5,397 | <img src="assets/bar/3D6117-36.svg" height="11"> 40.8% |
+| Markdown | 5,298 | <img src="assets/bar/083fa1-35.svg" height="11"> 40.0% |
+| CSS      | 1,697 | <img src="assets/bar/663399-11.svg" height="11"> 12.8% |
+| Org      |   798 | <img src="assets/bar/77aa99-5.svg" height="11"> 6.0%   |
 | HTML     |    48 | <img src="assets/bar/e34c26-0.svg" height="11"> 0.4%   |
 
 </td>
@@ -121,7 +121,7 @@
 | Language | Lines | Share                                                  |
 | :------- | ----: | :----------------------------------------------------- |
 | Nix      | 2,454 | <img src="assets/bar/7e7eff-55.svg" height="11"> 62.6% |
-| TOML     | 1,150 | <img src="assets/bar/9c4221-26.svg" height="11"> 29.3% |
+| TOML     | 1,153 | <img src="assets/bar/9c4221-26.svg" height="11"> 29.4% |
 | JSON     |   258 | <img src="assets/bar/292929-6.svg" height="11"> 6.6%   |
 | YAML     |    52 | <img src="assets/bar/cb171e-1.svg" height="11"> 1.3%   |
 | Edn      |     6 | <img src="assets/bar/cf222e-0.svg" height="11"> 0.2%   |
