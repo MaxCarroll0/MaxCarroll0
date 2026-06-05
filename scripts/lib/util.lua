@@ -50,4 +50,19 @@ function util.commas(n)
   return (s:gsub("^,", ""))
 end
 
+function util.esc(s)
+  return (s:gsub("[&<>]", { ["&"] = "&amp;", ["<"] = "&lt;", [">"] = "&gt;" }))
+end
+
+-- Display width: codepoints not bytes (bar glyphs █/░ are 3 bytes, 1 column).
+function util.dwidth(s)
+  return utf8.len(s) or #s
+end
+
+-- Normalise a language display name to a langurls key; gen-langurls.lua builds the table's keys the same way.
+function util.normkey(s)
+  s = s:lower():gsub("%s*%b()", ""):gsub("%s+header$", ""):gsub(" sharp", "#")
+  return (s:gsub("^%s+", ""):gsub("%s+$", ""))
+end
+
 return util

@@ -29,6 +29,28 @@ hide = ["SVG", "Plain Text", "Autoconf"]
 # tokei folds .re/.rei into OCaml; relabel to show both.
 "OCaml" = "OCaml/Reason"
 
+[languages.urls]
+# Homepage links come from scripts/lib/langurls.lua (generated from DBpedia/Wikidata by gen-langurls.lua).
+# These per-display-name overrides win over it: data formats those sources lack a homepage for, plus
+# nicer targets than the generated ones (e.g. cppreference over the ISO paywall).
+"C" = "https://en.cppreference.com/w/c"
+"C Header" = "https://en.cppreference.com/w/c"
+"C++" = "https://isocpp.org"
+"C++ Header" = "https://isocpp.org"
+"Org" = "https://orgmode.org"
+"Shell" = "https://www.gnu.org/software/bash/"
+"HTML" = "https://html.spec.whatwg.org/"
+"CSS" = "https://www.w3.org/Style/CSS/"
+"Markdown" = "https://commonmark.org"
+"JSON" = "https://www.json.org"
+"YAML" = "https://yaml.org"
+"TOML" = "https://toml.io"
+"Edn" = "https://github.com/edn-format/edn"
+
+[breakdown]
+# Per-row dropdown: every private repo collapses into one row carrying this label.
+private_label = "Private"
+
 [groups]
 # Languages are classified by GitHub Linguist's `type` (see lib/langgroups.lua).
 order = ["Programming", "Prose", "Configs / Data"]
@@ -78,3 +100,4 @@ ref = "asymmetric-unknown-type"
 [[external]]
 owner = "Talking-Music"
 repo = "Talking-Music"
+private = true # folds into the "Private" row in the per-language breakdowns

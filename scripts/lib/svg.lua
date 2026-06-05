@@ -1,13 +1,13 @@
 -- scripts/lib/svg.lua: build the small SVGs (per-row bars, stacked proportion bars) embedded in the README
 
+local util = require("lib.util")
+
 local svg = {}
 
 local FONT = "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
 local TRACK, TRACK_OP = "#808080", "0.22"
 
-local function esc(s)
-  return (s:gsub("[&<>]", { ["&"] = "&amp;", ["<"] = "&lt;", [">"] = "&gt;" }))
-end
+local esc = util.esc
 
 -- Outlined box at 100% with a left-to-right colour fill to `frac`. Returns (svg, fill_px) to name the file.
 function svg.rowbar(frac, color, w, h)

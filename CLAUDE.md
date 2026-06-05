@@ -54,12 +54,19 @@ Languages are classified into **Programming / Prose / Configs-Data** and coloure
 `scripts/gen-linguist.lua`. `lib/langgroups.lua` folds the four Linguist types into three groups (markup
 goes to Prose by default; override per type with `[groups].fold` or per language with `[groups.overrides]`,
 e.g. Nix to Configs / Data) and exposes `color(lang)` (merged names like "OCaml/Reason" resolve to the base).
+Language names link to homepages from `lib/langurls.lua` (a `{normalised-name = homepage}` table GENERATED
+from DBpedia/Wikidata by `scripts/gen-langurls.lua`); `config.toml` `[languages.urls]` overrides it per
+display name (data formats those sources lack, plus nicer targets).
 
-The two language metrics render as three side-by-side classes (one HTML `<td>` each). Per class, `lib/svg.lua`
-builds a stacked proportion bar (above the table) and, for each row, an outlined-box bar filled left-to-right
-to the within-group share, both coloured by the language's Linguist colour so a row's bar and its stacked
-segment match. `lib/render.lua` emits the HTML plus the SVGs (written under `assets/`, re-derived and pruned
-each run); `lib/mdtable.lua` still aligns the inner Markdown tables and the Totals table.
+The language classes are laid into columns (per `[output].columns`; currently two `<td>`s). Per class,
+`lib/svg.lua` builds a stacked proportion bar above the rows and, for each row, an outlined-box bar filled to
+the within-group share, both coloured by the language's Linguist colour so a row's bar and its stacked segment
+match. Each row is a `<details>` whose `<summary>` (homepage-linked name, lines, colour bar, %) is
+monospace-aligned with `<code>` + `&nbsp;` padding, and whose body is a **per-project breakdown**: one row per
+public repo (linked to GitHub) plus a single "Private" row, each with a grey bar showing that project's share
+of the language total. The breakdown reuses per-repo contributions that `stats.lua` keeps alongside the totals
+(`aggregate.breakdown`). `lib/render.lua` emits the HTML plus the SVGs (written under `assets/`, re-derived and
+pruned each run); `lib/mdtable.lua` now only aligns the Totals table.
 
 Per-repo work is `pcall`-isolated. External repos are full-cloned (blame needs history); multiple refs of
 one repo share a clone via `git worktree`. Owned repos use `--shallow-since`. All clones disable git-lfs
@@ -70,10 +77,11 @@ filters so tokei is not blocked on (and does not fetch) LFS binaries.
 `stats.lua` orchestrates. `lib/`: `conf` (TOML to JSON), `json` (decoder), `github` (owned discovery via
 `gh api --paginate --slurp`), `repos` (clone/worktree), `tokei` (run + parse: per-file stats live in
 `reports[].name`/`.stats`, skip the `Total` key), `blame` (attribution + dedup), `churn` (recent),
-`langgroups` plus generated `linguist` (classification + colour), `aggregate` (group/sort/cap,
-within-group %), `svg` (per-row + stacked bar SVGs), `render` (3-column HTML tables + the SVG files +
-totals), `mdtable` (align Markdown), `inject` (marker replacement), `util`.
-`require` paths assume the run starts at the repo root.
+`langgroups` plus generated `linguist` (classification + colour) and generated `langurls` (homepage links),
+`aggregate` (group/sort/cap + within-group %, plus per-project `breakdown`), `svg` (per-row + stacked bar
+SVGs), `render` (columnar HTML: per-language `<details>` dropdowns with homepage links + per-project breakdown,
+the SVG files, totals), `mdtable` (align the Totals Markdown), `inject` (marker replacement), `util`.
+`require` paths assume the run starts at the repo root. Generators: `gen-linguist.lua`, `gen-langurls.lua`.
 
 ## CI
 

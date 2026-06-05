@@ -12,6 +12,7 @@ local blame = require("lib.blame")
 local churn = require("lib.churn")
 local aggregate = require("lib.aggregate")
 local langgroups = require("lib.langgroups")
+local langurls = require("lib.langurls")
 local render = require("lib.render")
 local inject = require("lib.inject")
 
@@ -40,8 +41,22 @@ local recent_days = config.recent.days or 90
 local token = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN") or os.getenv("GH_PAT")
 
 local alltime, recent = {}, {}
+local top_contrib, recent_contrib = {}, {} -- lang -> repo label -> lines, for the per-row dropdowns
+local is_private = {} -- repo label -> bool
 local seen, seen_sha = {}, {}
 local n_owned, n_ext = 0, 0
+
+local function add_contrib(store, lang, label, n)
+  if n <= 0 then
+    return
+  end
+  local by = store[lang]
+  if not by then
+    by = {}
+    store[lang] = by
+  end
+  by[label] = (by[label] or 0) + n
+end
 
 util.rimraf(config.work_dir)
 util.mkdirp(config.work_dir)
@@ -55,13 +70,22 @@ if config.owned.enabled and selected("owned") then
     util.log("discovered %d owned repo(s)", #list)
     for _, r in ipairs(list) do
       if selected(r.full_name or r.name) then
+        local label = r.full_name or r.name
+        is_private[label] = r.private == true
         local ok, e = pcall(function()
           local prep = assert(repos.prepare_owned(r, token, config.work_dir, recent_days))
           local tk = assert(tokei.analyze(prep.path))
           for lang, s in pairs(tk.lang_totals) do
-            alltime[lang] = (alltime[lang] or 0) + s.code + s.comments
+            local n = s.code + s.comments
+            alltime[lang] = (alltime[lang] or 0) + n
+            add_contrib(top_contrib, lang, label, n)
           end
-          churn.collect(prep.path, emails, recent_days, tk.file_lang, seen_sha, recent)
+          local rec_sink = {}
+          churn.collect(prep.path, emails, recent_days, tk.file_lang, seen_sha, rec_sink)
+          for lang, n in pairs(rec_sink) do
+            recent[lang] = (recent[lang] or 0) + n
+            add_contrib(recent_contrib, lang, label, n)
+          end
           util.rimraf(prep.path)
         end)
         if ok then
@@ -78,13 +102,23 @@ util.log("== external repos (blame attribution) ==")
 for _, g in ipairs(repos.group_external(config.external)) do
   local key = g.owner .. "/" .. g.repo
   if selected(key) then
+    is_private[key] = g.private == true
     local ok, e = pcall(function()
       local prep = assert(repos.prepare_external(g.owner, g.repo, g.refs, token, config.work_dir))
+      local at_sink, rec_sink = {}, {}
       for _, unit in ipairs(prep.units) do
         local tk = assert(tokei.analyze(unit.path))
-        local touched, blamed = blame.attribute(unit.path, emails, email_set, flags, tk.file_lang, seen, alltime)
-        churn.collect(unit.path, emails, recent_days, tk.file_lang, seen_sha, recent)
+        local touched, blamed = blame.attribute(unit.path, emails, email_set, flags, tk.file_lang, seen, at_sink)
+        churn.collect(unit.path, emails, recent_days, tk.file_lang, seen_sha, rec_sink)
         util.log("  %s@%s: %d file(s) touched, %d blamed", key, unit.ref, touched, blamed)
+      end
+      for lang, n in pairs(at_sink) do
+        alltime[lang] = (alltime[lang] or 0) + n
+        add_contrib(top_contrib, lang, key, n)
+      end
+      for lang, n in pairs(rec_sink) do
+        recent[lang] = (recent[lang] or 0) + n
+        add_contrib(recent_contrib, lang, key, n)
       end
       util.rimraf(prep.maindir)
     end)
@@ -109,6 +143,13 @@ local gopts = {
 }
 local top_g = aggregate.grouped(alltime, gopts)
 local recent_g = aggregate.grouped(recent, gopts)
+local bopts = {
+  merge = config.languages.merge,
+  hide = config.languages.hide,
+  private_label = (config.breakdown and config.breakdown.private_label) or "Private",
+}
+local top_bd = aggregate.breakdown(top_contrib, is_private, bopts)
+local recent_bd = aggregate.breakdown(recent_contrib, is_private, bopts)
 local function write_assets(root, files)
   util.rimraf(root)
   for p, content in pairs(files) do
@@ -121,8 +162,18 @@ end
 
 local adir = config.output.assets or "assets"
 local cols = config.output.columns
-local top = render.metric(top_g, { dir = adir, metric = "top", columns = cols })
-local recent = render.metric(recent_g, { dir = adir, metric = "recent", columns = cols })
+local function render_metric(g, metric, breakdown)
+  return render.metric(g, {
+    dir = adir,
+    metric = metric,
+    columns = cols,
+    breakdown = breakdown,
+    urls = langurls,
+    url_overrides = config.languages.urls,
+  })
+end
+local top = render_metric(top_g, "top", top_bd)
+local recent = render_metric(recent_g, "recent", recent_bd)
 local totals_md = render.totals({
   languages = top_g.count,
   lines = top_g.total,

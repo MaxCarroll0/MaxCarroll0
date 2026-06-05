@@ -1,11 +1,10 @@
 -- scripts/lib/mdtable.lua: reflow GitHub pipe tables so the raw Markdown columns line up (width by codepoint)
 
+local util = require("lib.util")
+
 local mdtable = {}
 
--- Display width: count codepoints, not bytes (bar glyphs █/░ are 3 bytes, 1 column)
-local function dwidth(s)
-  return utf8.len(s) or #s
-end
+local dwidth = util.dwidth
 
 -- '|' and '\' are ASCII, so scanning bytes never splits a multibyte glyph
 local function split_cells(line)

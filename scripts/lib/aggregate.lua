@@ -69,4 +69,51 @@ function aggregate.grouped(map, opts)
   return { groups = groups, total = grand, count = count }
 end
 
+-- Per-language project split for the row dropdowns. `contrib` is lang -> label -> lines; private
+-- labels collapse into one `opts.private_label` row. Each row's pct is its share of the language total.
+function aggregate.breakdown(contrib, is_private, opts)
+  local merge = opts.merge
+  local merged = {}
+  for lang, by in pairs(contrib) do
+    local tgt = (merge and merge[lang]) or lang
+    local m = merged[tgt] or {}
+    merged[tgt] = m
+    for label, n in pairs(by) do
+      m[label] = (m[label] or 0) + n
+    end
+  end
+  for _, h in ipairs(opts.hide or {}) do
+    merged[h] = nil
+  end
+
+  local priv_label = opts.private_label or "Private"
+  local out = {}
+  for lang, by in pairs(merged) do
+    local rows, priv_lines, priv_repos, total = {}, 0, 0, 0
+    for label, n in pairs(by) do
+      total = total + n
+      if is_private[label] then
+        priv_lines = priv_lines + n
+        priv_repos = priv_repos + 1
+      else
+        rows[#rows + 1] = { label = label, lines = n }
+      end
+    end
+    if priv_lines > 0 then
+      rows[#rows + 1] = { label = priv_label, lines = priv_lines, private = true, repos = priv_repos }
+    end
+    table.sort(rows, function(a, c)
+      if a.lines ~= c.lines then
+        return a.lines > c.lines
+      end
+      return tostring(a.label) < tostring(c.label)
+    end)
+    for _, r in ipairs(rows) do
+      r.pct = total > 0 and r.lines / total * 100 or 0
+    end
+    out[lang] = { rows = rows, total = total }
+  end
+  return out
+end
+
 return aggregate

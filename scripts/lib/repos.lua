@@ -74,10 +74,11 @@ function repos.group_external(externals)
   for _, e in ipairs(externals) do
     local key = e.owner .. "/" .. e.repo
     if not by_key[key] then
-      by_key[key] = { owner = e.owner, repo = e.repo, refs = {} }
+      by_key[key] = { owner = e.owner, repo = e.repo, refs = {}, private = false }
       order[#order + 1] = by_key[key]
     end
     by_key[key].refs[#by_key[key].refs + 1] = e.ref or ""
+    by_key[key].private = by_key[key].private or e.private == true
   end
   return order
 end
