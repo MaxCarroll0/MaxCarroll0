@@ -75,18 +75,8 @@ if config.owned.enabled and selected("owned") then
 end
 
 util.log("== external repos (blame attribution) ==")
-local groups, order = {}, {}
-for _, e in ipairs(config.external) do
-  local key = e.owner .. "/" .. e.repo
-  if not groups[key] then
-    groups[key] = { owner = e.owner, repo = e.repo, refs = {} }
-    order[#order + 1] = key
-  end
-  groups[key].refs[#groups[key].refs + 1] = e.ref or ""
-end
-
-for _, key in ipairs(order) do
-  local g = groups[key]
+for _, g in ipairs(repos.group_external(config.external)) do
+  local key = g.owner .. "/" .. g.repo
   if selected(key) then
     local ok, e = pcall(function()
       local prep = assert(repos.prepare_external(g.owner, g.repo, g.refs, token, config.work_dir))

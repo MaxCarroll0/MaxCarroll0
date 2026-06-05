@@ -152,4 +152,12 @@ function json.decode(s)
   return v
 end
 
+function json.safe_decode(s, context)
+  local ok, v = pcall(json.decode, s)
+  if not ok then
+    return nil, (context or "json") .. ": " .. tostring(v)
+  end
+  return v
+end
+
 return json

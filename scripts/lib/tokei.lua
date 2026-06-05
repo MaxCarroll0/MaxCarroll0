@@ -14,9 +14,9 @@ function tokei.analyze(dir)
     return nil, "tokei produced no output (code " .. code .. ")"
   end
 
-  local ok, data = pcall(json.decode, out)
-  if not ok then
-    return nil, "tokei json decode failed: " .. tostring(data)
+  local data, err = json.safe_decode(out, "tokei")
+  if not data then
+    return nil, err
   end
 
   local lang_totals, file_lang = {}, {}
