@@ -109,9 +109,19 @@ local gopts = {
 }
 local top_g = aggregate.grouped(alltime, gopts)
 local recent_g = aggregate.grouped(recent, gopts)
-local blen = config.output.bar_length
-local top_md = render.grouped(top_g, { bar_length = blen, value_header = "Lines" })
-local recent_md = render.grouped(recent_g, { bar_length = blen, value_header = "Added" })
+local function write_assets(root, files)
+  util.rimraf(root)
+  for p, content in pairs(files) do
+    util.mkdirp((p:gsub("/[^/]*$", "")))
+    local fh = assert(io.open(p, "w"))
+    fh:write(content)
+    fh:close()
+  end
+end
+
+local adir = config.output.assets or "assets"
+local top = render.metric(top_g, { dir = adir, metric = "top" })
+local recent = render.metric(recent_g, { dir = adir, metric = "recent" })
 local totals_md = render.totals({
   languages = top_g.count,
   lines = top_g.total,
@@ -126,15 +136,7 @@ util.log("top:    %s lines across %d language(s)", util.commas(top_g.total), top
 util.log("recent: %s lines added (%dd)", util.commas(recent_g.total), recent_days)
 
 if opts.dry_run then
-  io.write(
-    "\n### TOTALS\n\n",
-    totals_md,
-    "\n\n### TOP LANGUAGES\n\n",
-    top_md,
-    "\n\n### RECENTLY USED\n\n",
-    recent_md,
-    "\n"
-  )
+  io.write("\n### TOTALS\n\n", totals_md, "\n\n### TOP\n\n", top.html, "\n\n### RECENT\n\n", recent.html, "\n")
   os.exit(0)
 end
 
@@ -143,12 +145,21 @@ local fh = assert(io.open(path, "r"), "cannot read " .. path)
 local text = fh:read("a")
 fh:close()
 
+local assets = {}
+for p, c in pairs(top.files) do
+  assets[p] = c
+end
+for p, c in pairs(recent.files) do
+  assets[p] = c
+end
+write_assets(adir, assets)
+
 local m = config.output.markers
 local new, ierr = inject.replace(text, m.totals.start, m.totals.finish, totals_md)
 assert(new, ierr)
-new, ierr = inject.replace(new, m.top.start, m.top.finish, top_md)
+new, ierr = inject.replace(new, m.top.start, m.top.finish, top.html)
 assert(new, ierr)
-new, ierr = inject.replace(new, m.recent.start, m.recent.finish, recent_md)
+new, ierr = inject.replace(new, m.recent.start, m.recent.finish, recent.html)
 assert(new, ierr)
 
 if new ~= text then

@@ -11,8 +11,8 @@
 | Metric           |  Value |
 | :--------------- | -----: |
 | Languages        |     50 |
-| Lines (all-time) | 95,044 |
-| Added (90d)      | 85,269 |
+| Lines (all-time) | 96,973 |
+| Added (90d)      | 88,084 |
 | Repositories     |     27 |
 
 <!-- TOTALS:END -->
@@ -21,33 +21,57 @@
 
 <!-- TOP-LANGS:START -->
 
-| Language           |      Lines | Share                |
-| :----------------- | ---------: | :------------------- |
-| **Programming**    | **80,668** |                      |
-| C++ Header         |     15,746 | `████████████` 19.5% |
-| Agda               |     13,682 | `██████████░░` 17.0% |
-| OCaml/Reason       |     13,357 | `██████████░░` 16.6% |
-| Java               |     12,922 | `██████████░░` 16.0% |
-| Haskell            |      7,016 | `█████░░░░░░░` 8.7%  |
-| BASH               |      4,172 | `███░░░░░░░░░` 5.2%  |
-| Nix                |      2,220 | `██░░░░░░░░░░` 2.8%  |
-| Lua                |      2,117 | `██░░░░░░░░░░` 2.6%  |
-| C Header           |      2,079 | `██░░░░░░░░░░` 2.6%  |
-| C                  |      2,049 | `██░░░░░░░░░░` 2.5%  |
-| Python             |      1,190 | `█░░░░░░░░░░░` 1.5%  |
-| Isabelle           |      1,109 | `█░░░░░░░░░░░` 1.4%  |
-| **Prose**          | **13,136** |                      |
-| TeX                |      6,982 | `████████████` 53.2% |
-| Markdown           |      3,851 | `███████░░░░░` 29.3% |
-| CSS                |      1,684 | `███░░░░░░░░░` 12.8% |
-| Org                |        559 | `█░░░░░░░░░░░` 4.3%  |
-| HTML               |         60 | `░░░░░░░░░░░░` 0.5%  |
-| **Configs / Data** |  **1,240** |                      |
-| TOML               |        887 | `████████████` 71.5% |
-| JSON               |        255 | `███░░░░░░░░░` 20.6% |
-| XML                |         49 | `█░░░░░░░░░░░` 4.0%  |
-| YAML               |         43 | `█░░░░░░░░░░░` 3.5%  |
-| Edn                |          6 | `░░░░░░░░░░░░` 0.5%  |
+<table>
+<tr>
+<td valign="top">
+
+<img src="assets/stack/top-programming.svg" alt="Programming">
+
+| Language     |  Lines | Share                                                  |
+| :----------- | -----: | :----------------------------------------------------- |
+| C++ Header   | 15,746 | <img src="assets/bar/c9510c-17.svg" height="11"> 19.6% |
+| Agda         | 13,682 | <img src="assets/bar/315665-15.svg" height="11"> 17.1% |
+| OCaml/Reason | 13,357 | <img src="assets/bar/ef7a08-15.svg" height="11"> 16.7% |
+| Java         | 12,922 | <img src="assets/bar/b07219-14.svg" height="11"> 16.1% |
+| Haskell      |  7,016 | <img src="assets/bar/5e5086-8.svg" height="11"> 8.7%   |
+| BASH         |  4,172 | <img src="assets/bar/1a7f37-5.svg" height="11"> 5.2%   |
+| Lua          |  3,869 | <img src="assets/bar/000080-4.svg" height="11"> 4.8%   |
+| C Header     |  2,079 | <img src="assets/bar/1a7f37-2.svg" height="11"> 2.6%   |
+| C            |  2,049 | <img src="assets/bar/555555-2.svg" height="11"> 2.6%   |
+| Python       |  1,190 | <img src="assets/bar/3572A5-1.svg" height="11"> 1.5%   |
+| Isabelle     |  1,109 | <img src="assets/bar/FEFE00-1.svg" height="11"> 1.4%   |
+| F#           |    722 | <img src="assets/bar/b845fc-1.svg" height="11"> 0.9%   |
+
+</td>
+<td valign="top">
+
+<img src="assets/stack/top-prose.svg" alt="Prose">
+
+| Language | Lines | Share                                                  |
+| :------- | ----: | :----------------------------------------------------- |
+| TeX      | 6,982 | <img src="assets/bar/3D6117-47.svg" height="11"> 52.9% |
+| Markdown | 3,920 | <img src="assets/bar/083fa1-26.svg" height="11"> 29.7% |
+| CSS      | 1,684 | <img src="assets/bar/663399-11.svg" height="11"> 12.8% |
+| Org      |   559 | <img src="assets/bar/77aa99-4.svg" height="11"> 4.2%   |
+| HTML     |    60 | <img src="assets/bar/e34c26-0.svg" height="11"> 0.5%   |
+
+</td>
+<td valign="top">
+
+<img src="assets/stack/top-configs-data.svg" alt="Configs / Data">
+
+| Language | Lines | Share                                                  |
+| :------- | ----: | :----------------------------------------------------- |
+| Nix      | 2,264 | <img src="assets/bar/7e7eff-56.svg" height="11"> 63.5% |
+| TOML     |   951 | <img src="assets/bar/9c4221-23.svg" height="11"> 26.7% |
+| JSON     |   255 | <img src="assets/bar/292929-6.svg" height="11"> 7.1%   |
+| XML      |    49 | <img src="assets/bar/0060ac-1.svg" height="11"> 1.4%   |
+| YAML     |    43 | <img src="assets/bar/cb171e-1.svg" height="11"> 1.2%   |
+| Edn      |     6 | <img src="assets/bar/cf222e-0.svg" height="11"> 0.2%   |
+
+</td>
+</tr>
+</table>
 
 <!-- TOP-LANGS:END -->
 
@@ -55,32 +79,56 @@
 
 <!-- RECENT-LANGS:START -->
 
-| Language           |      Added | Share                |
-| :----------------- | ---------: | :------------------- |
-| **Programming**    | **71,133** |                      |
-| Agda               |     27,526 | `████████████` 38.7% |
-| C++ Header         |     17,937 | `████████░░░░` 25.2% |
-| Haskell            |      9,665 | `████░░░░░░░░` 13.6% |
-| BASH               |      4,548 | `██░░░░░░░░░░` 6.4%  |
-| Lua                |      2,396 | `█░░░░░░░░░░░` 3.4%  |
-| C                  |      2,152 | `█░░░░░░░░░░░` 3.0%  |
-| Nix                |      1,964 | `█░░░░░░░░░░░` 2.8%  |
-| C Header           |      1,736 | `█░░░░░░░░░░░` 2.4%  |
-| Isabelle           |      1,352 | `█░░░░░░░░░░░` 1.9%  |
-| Lean               |        599 | `░░░░░░░░░░░░` 0.8%  |
-| Rust               |        235 | `░░░░░░░░░░░░` 0.3%  |
-| Shell              |        213 | `░░░░░░░░░░░░` 0.3%  |
-| **Prose**          | **12,768** |                      |
-| TeX                |      5,397 | `████████████` 42.3% |
-| Markdown           |      5,029 | `███████████░` 39.4% |
-| CSS                |      1,697 | `████░░░░░░░░` 13.3% |
-| Org                |        597 | `█░░░░░░░░░░░` 4.7%  |
-| HTML               |         48 | `░░░░░░░░░░░░` 0.4%  |
-| **Configs / Data** |  **1,368** |                      |
-| TOML               |      1,068 | `████████████` 78.1% |
-| JSON               |        258 | `███░░░░░░░░░` 18.9% |
-| YAML               |         36 | `░░░░░░░░░░░░` 2.6%  |
-| Edn                |          6 | `░░░░░░░░░░░░` 0.4%  |
+<table>
+<tr>
+<td valign="top">
+
+<img src="assets/stack/recent-programming.svg" alt="Programming">
+
+| Language   |  Lines | Share                                                  |
+| :--------- | -----: | :----------------------------------------------------- |
+| Agda       | 27,526 | <img src="assets/bar/315665-34.svg" height="11"> 38.7% |
+| C++ Header | 17,937 | <img src="assets/bar/c9510c-22.svg" height="11"> 25.2% |
+| Haskell    |  9,665 | <img src="assets/bar/5e5086-12.svg" height="11"> 13.6% |
+| BASH       |  4,548 | <img src="assets/bar/1a7f37-6.svg" height="11"> 6.4%   |
+| Lua        |  4,338 | <img src="assets/bar/000080-5.svg" height="11"> 6.1%   |
+| C          |  2,152 | <img src="assets/bar/555555-3.svg" height="11"> 3.0%   |
+| C Header   |  1,736 | <img src="assets/bar/1a7f37-2.svg" height="11"> 2.4%   |
+| Isabelle   |  1,352 | <img src="assets/bar/FEFE00-2.svg" height="11"> 1.9%   |
+| Lean       |    599 | <img src="assets/bar/0550ae-1.svg" height="11"> 0.8%   |
+| Rust       |    235 | <img src="assets/bar/dea584-0.svg" height="11"> 0.3%   |
+| Shell      |    213 | <img src="assets/bar/89e051-0.svg" height="11"> 0.3%   |
+| JavaScript |    175 | <img src="assets/bar/f1e05a-0.svg" height="11"> 0.2%   |
+
+</td>
+<td valign="top">
+
+<img src="assets/stack/recent-prose.svg" alt="Prose">
+
+| Language | Lines | Share                                                  |
+| :------- | ----: | :----------------------------------------------------- |
+| TeX      | 5,397 | <img src="assets/bar/3D6117-36.svg" height="11"> 41.3% |
+| Markdown | 5,113 | <img src="assets/bar/083fa1-34.svg" height="11"> 39.2% |
+| CSS      | 1,697 | <img src="assets/bar/663399-11.svg" height="11"> 13.0% |
+| Org      |   798 | <img src="assets/bar/77aa99-5.svg" height="11"> 6.1%   |
+| HTML     |    48 | <img src="assets/bar/e34c26-0.svg" height="11"> 0.4%   |
+
+</td>
+<td valign="top">
+
+<img src="assets/stack/recent-configs-data.svg" alt="Configs / Data">
+
+| Language | Lines | Share                                                  |
+| :------- | ----: | :----------------------------------------------------- |
+| Nix      | 2,454 | <img src="assets/bar/7e7eff-55.svg" height="11"> 62.6% |
+| TOML     | 1,150 | <img src="assets/bar/9c4221-26.svg" height="11"> 29.3% |
+| JSON     |   258 | <img src="assets/bar/292929-6.svg" height="11"> 6.6%   |
+| YAML     |    52 | <img src="assets/bar/cb171e-1.svg" height="11"> 1.3%   |
+| Edn      |     6 | <img src="assets/bar/cf222e-0.svg" height="11"> 0.2%   |
+
+</td>
+</tr>
+</table>
 
 <!-- RECENT-LANGS:END -->
 

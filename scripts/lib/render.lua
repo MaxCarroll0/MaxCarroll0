@@ -1,41 +1,58 @@
--- scripts/lib/render.lua: render grouped language results and a totals table as aligned Markdown
+-- scripts/lib/render.lua: render the totals table and the grouped, colour-barred language tables
 
 local util = require("lib.util")
 local mdtable = require("lib.mdtable")
+local svg = require("lib.svg")
+local langgroups = require("lib.langgroups")
 
 local render = {}
 
--- Bar scaled to the group's leader (frac in 0..1); the % column carries the share within its respective language class (e.g. programming langs)
-local function bar(frac, width)
-  local filled = math.floor(frac * width + 0.5)
-  filled = math.max(0, math.min(width, filled))
-  return string.rep("█", filled) .. string.rep("░", width - filled)
+local GROUP_ACCENT = {
+  ["Programming"] = "#3572A5",
+  ["Prose"] = "#1a7f37",
+  ["Configs / Data"] = "#9a6700",
+}
+
+local function slug(s)
+  return (s:lower():gsub("[^%w]+", "-"):gsub("^%-+", ""):gsub("%-+$", ""))
 end
 
-function render.grouped(result, opts)
-  local width = opts.bar_length or 12
-  local out = { ("| Language | %s | Share |"):format(opts.value_header or "Lines"), "|:--|--:|:--|" }
+-- Returns { html = <3-column HTML block>, files = { path = svg } } for one metric's grouped result.
+function render.metric(result, opts)
+  local dir, metric = opts.dir or "assets", opts.metric
+  local col_w, bar_w = opts.col_width or 280, opts.bar_width or 90
+  local files, cells = {}, {}
+
   for _, g in ipairs(result.groups) do
-    out[#out + 1] = ("| **%s** | **%s** | |"):format(g.name, util.commas(g.total))
-    local maxv = 0
+    local segs = {}
+    local rows = { "| Language | Lines | Share |", "|:--|--:|:--|" }
     for _, r in ipairs(g.rows) do
-      if r.lines > maxv then
-        maxv = r.lines
-      end
-    end
-    for _, r in ipairs(g.rows) do
-      out[#out + 1] = ("| %s | %s | `%s` %.1f%% |"):format(
+      local color = langgroups.color(r.lang)
+      segs[#segs + 1] = { frac = g.total > 0 and r.lines / g.total or 0, color = color }
+      local bar, fill = svg.rowbar(r.pct / 100, color, bar_w, 12)
+      local bar_path = ("%s/bar/%s-%d.svg"):format(dir, (color:gsub("#", "")), fill)
+      files[bar_path] = bar
+      rows[#rows + 1] = ('| %s | %s | <img src="%s" height="11"> %.1f%% |'):format(
         r.lang,
         util.commas(r.lines),
-        bar(maxv > 0 and r.lines / maxv or 0, width),
+        bar_path,
         r.pct
       )
     end
+
+    local stack_path = ("%s/stack/%s-%s.svg"):format(dir, metric, slug(g.name))
+    files[stack_path] = svg.stacked(g.name, GROUP_ACCENT[g.name] or "#808080", segs, col_w)
+    cells[#cells + 1] = ('<td valign="top">\n\n<img src="%s" alt="%s">\n\n%s\n\n</td>'):format(
+      stack_path,
+      g.name,
+      mdtable.reflow(table.concat(rows, "\n"))
+    )
   end
-  if #result.groups == 0 then
-    out[#out + 1] = "| _no data_ | | |"
+
+  if #cells == 0 then
+    return { html = "_no data_", files = files }
   end
-  return mdtable.reflow(table.concat(out, "\n"))
+  return { html = "<table>\n<tr>\n" .. table.concat(cells, "\n") .. "\n</tr>\n</table>", files = files }
 end
 
 function render.totals(s)

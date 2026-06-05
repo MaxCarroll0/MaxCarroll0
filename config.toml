@@ -35,12 +35,12 @@ order = ["Programming", "Prose", "Configs / Data"]
 per_group = 12
 
 [groups.overrides]
-# Reclassify one language, e.g. move stylesheets out of Prose:
-# "CSS" = "Configs / Data"
+"Nix" = "Configs / Data"
+# e.g. move stylesheets out of Prose: "CSS" = "Configs / Data"
 
 [output]
 readme = "README.md"
-bar_length = 12
+assets = "assets"
 
 [output.markers.totals]
 start = "<!-- TOTALS:START -->"
