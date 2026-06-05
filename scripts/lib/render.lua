@@ -21,7 +21,7 @@ end
 function render.metric(result, opts)
   local dir, metric = opts.dir or "assets", opts.metric
   local col_w, bar_w = opts.col_width or 280, opts.bar_width or 90
-  local files, cells = {}, {}
+  local files, content, order = {}, {}, {}
 
   for _, g in ipairs(result.groups) do
     local segs = {}
@@ -42,15 +42,41 @@ function render.metric(result, opts)
 
     local stack_path = ("%s/stack/%s-%s.svg"):format(dir, metric, slug(g.name))
     files[stack_path] = svg.stacked(g.name, GROUP_ACCENT[g.name] or "#808080", segs, col_w)
-    cells[#cells + 1] = ('<td valign="top">\n\n<img src="%s" alt="%s">\n\n%s\n\n</td>'):format(
+    content[g.name] = ('<img src="%s" alt="%s">\n\n%s'):format(
       stack_path,
       g.name,
       mdtable.reflow(table.concat(rows, "\n"))
     )
+    order[#order + 1] = g.name
   end
 
-  if #cells == 0 then
+  if #order == 0 then
     return { html = "_no data_", files = files }
+  end
+
+  -- Arrange classes into columns; classes sharing a column stack vertically.
+  local placed, columns = {}, {}
+  for _, col in ipairs(opts.columns or {}) do
+    local parts = {}
+    for _, name in ipairs(col) do
+      if content[name] then
+        parts[#parts + 1] = content[name]
+        placed[name] = true
+      end
+    end
+    if #parts > 0 then
+      columns[#columns + 1] = parts
+    end
+  end
+  for _, name in ipairs(order) do
+    if not placed[name] then
+      columns[#columns + 1] = { content[name] }
+    end
+  end
+
+  local cells = {}
+  for _, parts in ipairs(columns) do
+    cells[#cells + 1] = '<td valign="top">\n\n' .. table.concat(parts, "\n\n") .. "\n\n</td>"
   end
   return { html = "<table>\n<tr>\n" .. table.concat(cells, "\n") .. "\n</tr>\n</table>", files = files }
 end

@@ -120,8 +120,9 @@ local function write_assets(root, files)
 end
 
 local adir = config.output.assets or "assets"
-local top = render.metric(top_g, { dir = adir, metric = "top" })
-local recent = render.metric(recent_g, { dir = adir, metric = "recent" })
+local cols = config.output.columns
+local top = render.metric(top_g, { dir = adir, metric = "top", columns = cols })
+local recent = render.metric(recent_g, { dir = adir, metric = "recent", columns = cols })
 local totals_md = render.totals({
   languages = top_g.count,
   lines = top_g.total,

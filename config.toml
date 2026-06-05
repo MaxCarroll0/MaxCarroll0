@@ -41,6 +41,8 @@ per_group = 12
 [output]
 readme = "README.md"
 assets = "assets"
+# Lay the language classes into columns; classes in the same column stack vertically.
+columns = [["Programming"], ["Prose", "Configs / Data"]]
 
 [output.markers.totals]
 start = "<!-- TOTALS:START -->"
