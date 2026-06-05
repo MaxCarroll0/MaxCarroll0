@@ -164,7 +164,7 @@ function render.totals(s)
     "|:--|--:|",
     ("| Languages | %s |"):format(util.commas(s.languages)),
     ("| Lines (all-time) | %s |"):format(util.commas(s.lines)),
-    ("| Added (%dd) | %s |"):format(s.days, util.commas(s.added)),
+    ("| Lines (%dd) | %s |"):format(s.days, util.commas(s.added)),
     ("| Repositories | %s |"):format(util.commas(s.repos)),
   }
   return mdtable.reflow(table.concat(rows, "\n"))
