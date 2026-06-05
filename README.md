@@ -1,9 +1,89 @@
 <div align="center">
 
-![Stats](./profile/stats.svg)
+# MaxCarroll0
 
-![Top Languages](./profile/top-langs.svg)
+</div>
 
-![Pinned](./profile/pin-readme-tools-github-readme-stats.svg)
+## Totals
 
+<!-- TOTALS:START -->
+
+| Metric           |  Value |
+| :--------------- | -----: |
+| Languages        |     50 |
+| Lines (all-time) | 95,044 |
+| Added (90d)      | 85,269 |
+| Repositories     |     27 |
+
+<!-- TOTALS:END -->
+
+## Top Languages
+
+<!-- TOP-LANGS:START -->
+
+| Language           |      Lines | Share                |
+| :----------------- | ---------: | :------------------- |
+| **Programming**    | **80,668** |                      |
+| C++ Header         |     15,746 | `████████████` 19.5% |
+| Agda               |     13,682 | `██████████░░` 17.0% |
+| OCaml/Reason       |     13,357 | `██████████░░` 16.6% |
+| Java               |     12,922 | `██████████░░` 16.0% |
+| Haskell            |      7,016 | `█████░░░░░░░` 8.7%  |
+| BASH               |      4,172 | `███░░░░░░░░░` 5.2%  |
+| Nix                |      2,220 | `██░░░░░░░░░░` 2.8%  |
+| Lua                |      2,117 | `██░░░░░░░░░░` 2.6%  |
+| C Header           |      2,079 | `██░░░░░░░░░░` 2.6%  |
+| C                  |      2,049 | `██░░░░░░░░░░` 2.5%  |
+| Python             |      1,190 | `█░░░░░░░░░░░` 1.5%  |
+| Isabelle           |      1,109 | `█░░░░░░░░░░░` 1.4%  |
+| **Prose**          | **13,136** |                      |
+| TeX                |      6,982 | `████████████` 53.2% |
+| Markdown           |      3,851 | `███████░░░░░` 29.3% |
+| CSS                |      1,684 | `███░░░░░░░░░` 12.8% |
+| Org                |        559 | `█░░░░░░░░░░░` 4.3%  |
+| HTML               |         60 | `░░░░░░░░░░░░` 0.5%  |
+| **Configs / Data** |  **1,240** |                      |
+| TOML               |        887 | `████████████` 71.5% |
+| JSON               |        255 | `███░░░░░░░░░` 20.6% |
+| XML                |         49 | `█░░░░░░░░░░░` 4.0%  |
+| YAML               |         43 | `█░░░░░░░░░░░` 3.5%  |
+| Edn                |          6 | `░░░░░░░░░░░░` 0.5%  |
+
+<!-- TOP-LANGS:END -->
+
+## Recently Used <sub>· last 90 days</sub>
+
+<!-- RECENT-LANGS:START -->
+
+| Language           |      Added | Share                |
+| :----------------- | ---------: | :------------------- |
+| **Programming**    | **71,133** |                      |
+| Agda               |     27,526 | `████████████` 38.7% |
+| C++ Header         |     17,937 | `████████░░░░` 25.2% |
+| Haskell            |      9,665 | `████░░░░░░░░` 13.6% |
+| BASH               |      4,548 | `██░░░░░░░░░░` 6.4%  |
+| Lua                |      2,396 | `█░░░░░░░░░░░` 3.4%  |
+| C                  |      2,152 | `█░░░░░░░░░░░` 3.0%  |
+| Nix                |      1,964 | `█░░░░░░░░░░░` 2.8%  |
+| C Header           |      1,736 | `█░░░░░░░░░░░` 2.4%  |
+| Isabelle           |      1,352 | `█░░░░░░░░░░░` 1.9%  |
+| Lean               |        599 | `░░░░░░░░░░░░` 0.8%  |
+| Rust               |        235 | `░░░░░░░░░░░░` 0.3%  |
+| Shell              |        213 | `░░░░░░░░░░░░` 0.3%  |
+| **Prose**          | **12,768** |                      |
+| TeX                |      5,397 | `████████████` 42.3% |
+| Markdown           |      5,029 | `███████████░` 39.4% |
+| CSS                |      1,697 | `████░░░░░░░░` 13.3% |
+| Org                |        597 | `█░░░░░░░░░░░` 4.7%  |
+| HTML               |         48 | `░░░░░░░░░░░░` 0.4%  |
+| **Configs / Data** |  **1,368** |                      |
+| TOML               |      1,068 | `████████████` 78.1% |
+| JSON               |        258 | `███░░░░░░░░░` 18.9% |
+| YAML               |         36 | `░░░░░░░░░░░░` 2.6%  |
+| Edn                |          6 | `░░░░░░░░░░░░` 0.4%  |
+
+<!-- RECENT-LANGS:END -->
+
+<div align="center">
+<sub>Lines attributed across owned + external repos with <a href="https://github.com/XAMPPRocky/tokei">tokei</a> + <code>git blame</code>, regenerated daily. <a href="scripts/">How it works.</a></sub>
 </div>

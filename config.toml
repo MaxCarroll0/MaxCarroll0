@@ -1,0 +1,78 @@
+# Settings for the README language-stats generator (scripts/stats.lua).
+
+work_dir = "/tmp/loc-stats"
+
+[identities]
+emails = [
+  "133233123+MaxCarroll0@users.noreply.github.com",
+  "mjvcarroll@gmail.com",
+  "mjvcaroll@gmail.com", # typo variant, intentional
+]
+
+[owned]
+enabled = true
+visibility = "all"
+include_forks = false
+include_archived = false
+
+[counting]
+blame_flags = "-w" # add "-M -C" to follow moved/copied lines
+dedupe_shared_history = true
+
+[recent]
+days = 90
+
+[languages]
+hide = ["SVG", "Plain Text", "Autoconf"]
+
+[languages.merge]
+# tokei folds .re/.rei into OCaml; relabel to show both.
+"OCaml" = "OCaml/Reason"
+
+[groups]
+# Languages are classified by GitHub Linguist's `type` (see lib/langgroups.lua).
+order = ["Programming", "Prose", "Configs / Data"]
+per_group = 12
+
+[groups.overrides]
+# Reclassify one language, e.g. move stylesheets out of Prose:
+# "CSS" = "Configs / Data"
+
+[output]
+readme = "README.md"
+bar_length = 12
+
+[output.markers.totals]
+start = "<!-- TOTALS:START -->"
+finish = "<!-- TOTALS:END -->"
+
+[output.markers.top]
+start = "<!-- TOP-LANGS:START -->"
+finish = "<!-- TOP-LANGS:END -->"
+
+[output.markers.recent]
+start = "<!-- RECENT-LANGS:START -->"
+finish = "<!-- RECENT-LANGS:END -->"
+
+[[external]]
+owner = "Extreme-Kayaking"
+repo = "kayak-hull-optimisation"
+
+[[external]]
+owner = "hazelgrove"
+repo = "hazel"
+ref = "type-slicing"
+
+[[external]]
+owner = "hazelgrove"
+repo = "hazel"
+ref = "witnesses-type-slicing"
+
+[[external]]
+owner = "hazelgrove"
+repo = "hazel"
+ref = "asymmetric-unknown-type"
+
+[[external]]
+owner = "Talking-Music"
+repo = "Talking-Music"

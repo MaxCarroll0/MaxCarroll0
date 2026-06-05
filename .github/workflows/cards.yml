@@ -1,44 +1,30 @@
-name: Update README cards
+name: Update README stats
+
 on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
-  build:
+  stats:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate stats card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&include_all_commits=true
-          path: profile/stats.svg
-          token: ${{ secrets.GH_PAT }}
+      - uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=20&hide=postscript,svg
-          path: profile/top-langs.svg
-          token: ${{ secrets.GH_PAT }}
+      - name: Generate language stats
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: nix run .
 
-      - name: Generate pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=readme-tools&repo=github-readme-stats
-          path: profile/pin-readme-tools-github-readme-stats.svg
-          token: ${{ secrets.GH_PAT }}
-
-      - name: Commit cards
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
+          git add README.md
+          git commit -m "Update language stats" || exit 0
           git push
