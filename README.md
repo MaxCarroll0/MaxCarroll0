@@ -11,7 +11,7 @@
 | Metric           |   Value |
 | :--------------- | ------: |
 | Languages        |      48 |
-| Lines (all-time) | 114,069 |
+| Lines (all-time) | 114,073 |
 | Lines (90d)      |  75,524 |
 | Repositories     |      29 |
 
@@ -92,7 +92,7 @@
 
 <img src="assets/stack/top-prose.svg" alt="Prose">
 
-<details><summary><img src="assets/dot/3D6117.svg" width="10" height="10"> <code><a href="https://tug.org/">TeX</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;8,591</code>&nbsp;<img src="assets/bar/3D6117-48.svg" height="11">&nbsp;<code>55.0%</code></summary>
+<details><summary><img src="assets/dot/3D6117.svg" width="10" height="10"> <code><a href="https://tug.org/">TeX</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;8,591</code>&nbsp;<img src="assets/bar/3D6117-48.svg" height="11">&nbsp;<code>54.9%</code></summary>
 <table>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-tex">MaxCarroll0/polymorphic-type-slicing-tex</a></td><td align="right">3,698</td><td><img src="assets/bar/8b949e-38.svg" height="11"> 43.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Type-Error-Debugging-in-Hazel---Dissertation">MaxCarroll0/Type-Error-Debugging-in-Hazel---Dissertation</a></td><td align="right">3,173</td><td><img src="assets/bar/8b949e-33.svg" height="11"> 36.9%</td></tr>
@@ -100,11 +100,11 @@
 <tr><td><a href="https://github.com/MaxCarroll0/Compiler-Arith-IMP-Termination">MaxCarroll0/Compiler-Arith-IMP-Termination</a></td><td align="right">101</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nix-latex-template">MaxCarroll0/nix-latex-template</a></td><td align="right">10</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;5,103</code>&nbsp;<img src="assets/bar/083fa1-29.svg" height="11">&nbsp;<code>32.6%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;5,107</code>&nbsp;<img src="assets/bar/083fa1-29.svg" height="11">&nbsp;<code>32.7%</code></summary>
 <table>
-<tr><td>Private (8)</td><td align="right">3,659</td><td><img src="assets/bar/8b949e-63.svg" height="11"> 71.7%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">518</td><td><img src="assets/bar/8b949e-9.svg" height="11"> 10.2%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">362</td><td><img src="assets/bar/8b949e-6.svg" height="11"> 7.1%</td></tr>
+<tr><td>Private (8)</td><td align="right">3,659</td><td><img src="assets/bar/8b949e-63.svg" height="11"> 71.6%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">518</td><td><img src="assets/bar/8b949e-9.svg" height="11"> 10.1%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">366</td><td><img src="assets/bar/8b949e-6.svg" height="11"> 7.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">183</td><td><img src="assets/bar/8b949e-3.svg" height="11"> 3.6%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">109</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.1%</td></tr>
 <tr><td><a href="https://github.com/Extreme-Kayaking/kayak-hull-optimisation">Extreme-Kayaking/kayak-hull-optimisation</a></td><td align="right">100</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.0%</td></tr>
