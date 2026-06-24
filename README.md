@@ -11,8 +11,8 @@
 | Metric           |   Value |
 | :--------------- | ------: |
 | Languages        |      48 |
-| Lines (all-time) | 120,572 |
-| Lines (90d)      |  80,920 |
+| Lines (all-time) | 120,575 |
+| Lines (90d)      |  80,916 |
 | Repositories     |      30 |
 
 <!-- TOTALS:END -->
@@ -101,11 +101,11 @@
 <tr><td><a href="https://github.com/MaxCarroll0/Compiler-Arith-IMP-Termination">MaxCarroll0/Compiler-Arith-IMP-Termination</a></td><td align="right">101</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.1%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nix-latex-template">MaxCarroll0/nix-latex-template</a></td><td align="right">10</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;5,551</code>&nbsp;<img src="assets/bar/083fa1-30.svg" height="11">&nbsp;<code>33.5%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;5,554</code>&nbsp;<img src="assets/bar/083fa1-30.svg" height="11">&nbsp;<code>33.5%</code></summary>
 <table>
-<tr><td>Private (9)</td><td align="right">4,084</td><td><img src="assets/bar/8b949e-65.svg" height="11"> 73.6%</td></tr>
+<tr><td>Private (9)</td><td align="right">4,084</td><td><img src="assets/bar/8b949e-65.svg" height="11"> 73.5%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">518</td><td><img src="assets/bar/8b949e-8.svg" height="11"> 9.3%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">366</td><td><img src="assets/bar/8b949e-6.svg" height="11"> 6.6%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">369</td><td><img src="assets/bar/8b949e-6.svg" height="11"> 6.6%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">183</td><td><img src="assets/bar/8b949e-3.svg" height="11"> 3.3%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">109</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.0%</td></tr>
 <tr><td><a href="https://github.com/Extreme-Kayaking/kayak-hull-optimisation">Extreme-Kayaking/kayak-hull-optimisation</a></td><td align="right">100</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 1.8%</td></tr>
@@ -261,15 +261,14 @@
 <tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">2,080</td><td><img src="assets/bar/8b949e-32.svg" height="11"> 35.9%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nix-latex-template">MaxCarroll0/nix-latex-template</a></td><td align="right">10</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.2%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;4,412</code>&nbsp;<img src="assets/bar/083fa1-37.svg" height="11">&nbsp;<code>42.5%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;4,408</code>&nbsp;<img src="assets/bar/083fa1-37.svg" height="11">&nbsp;<code>42.4%</code></summary>
 <table>
-<tr><td>Private (3)</td><td align="right">3,990</td><td><img src="assets/bar/8b949e-80.svg" height="11"> 90.4%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">183</td><td><img src="assets/bar/8b949e-4.svg" height="11"> 4.1%</td></tr>
+<tr><td>Private (3)</td><td align="right">3,990</td><td><img src="assets/bar/8b949e-80.svg" height="11"> 90.5%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">183</td><td><img src="assets/bar/8b949e-4.svg" height="11"> 4.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">116</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.6%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-tex">MaxCarroll0/polymorphic-type-slicing-tex</a></td><td align="right">94</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.1%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nix-ocaml-template">MaxCarroll0/nix-ocaml-template</a></td><td align="right">19</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.4%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Hillebrand-Kanellakis">MaxCarroll0/Hillebrand-Kanellakis</a></td><td align="right">5</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/Associative-n-Category-Proofs">MaxCarroll0/Associative-n-Category-Proofs</a></td><td align="right">4</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config-laptop">MaxCarroll0/nixOS-config-laptop</a></td><td align="right">1</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/77aa99.svg" width="10" height="10"> <code><a href="https://orgmode.org">Org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;195</code>&nbsp;<img src="assets/bar/77aa99-2.svg" height="11">&nbsp;<code>&nbsp;1.9%</code></summary>
