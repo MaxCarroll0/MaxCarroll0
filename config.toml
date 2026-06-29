@@ -100,6 +100,11 @@ ref = "type-slicing"
 [[external]]
 owner = "hazelgrove"
 repo = "hazel"
+ref = "type-slicing-v2"
+
+[[external]]
+owner = "hazelgrove"
+repo = "hazel"
 ref = "witnesses-type-slicing"
 
 [[external]]
