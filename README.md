@@ -11,8 +11,8 @@
 | Metric           |   Value |
 | :--------------- | ------: |
 | Languages        |      48 |
-| Lines (all-time) | 126,564 |
-| Lines (90d)      |  85,331 |
+| Lines (all-time) | 126,586 |
+| Lines (90d)      |  85,353 |
 | Repositories     |      30 |
 
 <!-- TOTALS:END -->
@@ -27,9 +27,9 @@
 
 <img src="assets/stack/top-programming.svg" alt="Programming">
 
-<details><summary><img src="assets/dot/5e5086.svg" width="10" height="10"> <code><a href="https://www.haskell.org">Haskell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;24,734</code>&nbsp;<img src="assets/bar/5e5086-21.svg" height="11">&nbsp;<code>23.4%</code></summary>
+<details><summary><img src="assets/dot/5e5086.svg" width="10" height="10"> <code><a href="https://www.haskell.org">Haskell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;24,756</code>&nbsp;<img src="assets/bar/5e5086-21.svg" height="11">&nbsp;<code>23.4%</code></summary>
 <table>
-<tr><td>Private (3)</td><td align="right">24,544</td><td><img src="assets/bar/8b949e-87.svg" height="11"> 99.2%</td></tr>
+<tr><td>Private (3)</td><td align="right">24,566</td><td><img src="assets/bar/8b949e-87.svg" height="11"> 99.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">190</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 0.8%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/ef7a08.svg" width="10" height="10"> <code><a href="https://ocaml.org/">OCaml/Reason</a></code><code>&nbsp;&nbsp;18,833</code>&nbsp;<img src="assets/bar/ef7a08-16.svg" height="11">&nbsp;<code>17.8%</code></summary>
@@ -196,9 +196,9 @@
 
 <img src="assets/stack/recent-programming.svg" alt="Programming">
 
-<details><summary><img src="assets/dot/5e5086.svg" width="10" height="10"> <code><a href="https://www.haskell.org">Haskell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;24,734</code>&nbsp;<img src="assets/bar/5e5086-30.svg" height="11">&nbsp;<code>34.2%</code></summary>
+<details><summary><img src="assets/dot/5e5086.svg" width="10" height="10"> <code><a href="https://www.haskell.org">Haskell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;24,756</code>&nbsp;<img src="assets/bar/5e5086-30.svg" height="11">&nbsp;<code>34.2%</code></summary>
 <table>
-<tr><td>Private (3)</td><td align="right">24,544</td><td><img src="assets/bar/8b949e-87.svg" height="11"> 99.2%</td></tr>
+<tr><td>Private (3)</td><td align="right">24,566</td><td><img src="assets/bar/8b949e-87.svg" height="11"> 99.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">190</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 0.8%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/f34b7d.svg" width="10" height="10"> <code><a href="https://isocpp.org">C++</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;14,812</code>&nbsp;<img src="assets/bar/f34b7d-18.svg" height="11">&nbsp;<code>20.5%</code></summary>
