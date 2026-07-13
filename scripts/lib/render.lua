@@ -167,7 +167,15 @@ function render.totals(s)
     ("| Lines (%dd) | %s |"):format(s.days, util.commas(s.added)),
     ("| Repositories | %s |"):format(util.commas(s.repos)),
   }
-  return mdtable.reflow(table.concat(rows, "\n"))
+  local out = mdtable.reflow(table.concat(rows, "\n"))
+  if s.language_names and #s.language_names > 0 then
+    local names = {}
+    for i, lang in ipairs(s.language_names) do
+      names[i] = ("<code>%s</code>"):format(util.esc(lang))
+    end
+    out = out .. ("\n\n<sub><strong>Languages used:</strong> %s</sub>"):format(table.concat(names, ", "))
+  end
+  return out
 end
 
 return render

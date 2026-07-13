@@ -25,7 +25,7 @@ function aggregate.grouped(map, opts)
     order[i] = g
   end
 
-  local buckets, grand, count = {}, 0, 0
+  local buckets, grand, count, languages = {}, 0, 0, {}
   for _, g in ipairs(order) do
     buckets[g] = { name = g, total = 0, rows = {} }
   end
@@ -41,7 +41,11 @@ function aggregate.grouped(map, opts)
     b.total = b.total + v
     grand = grand + v
     count = count + 1
+    languages[#languages + 1] = lang
   end
+  table.sort(languages, function(a, c)
+    return a:lower() < c:lower()
+  end)
 
   local groups = {}
   for _, g in ipairs(order) do
@@ -56,7 +60,7 @@ function aggregate.grouped(map, opts)
       for _, r in ipairs(b.rows) do
         r.pct = b.total > 0 and r.lines / b.total * 100 or 0
       end
-      if opts.per_group and #b.rows > opts.per_group then
+      if opts.per_group and opts.per_group > 0 and #b.rows > opts.per_group then
         local t, other = {}, 0
         for i = 1, opts.per_group do
           t[i] = b.rows[i]
@@ -77,7 +81,7 @@ function aggregate.grouped(map, opts)
       groups[#groups + 1] = b
     end
   end
-  return { groups = groups, total = grand, count = count }
+  return { groups = groups, total = grand, count = count, languages = languages }
 end
 
 -- Per-language project split for the row dropdowns. `contrib` is lang -> label -> lines; private

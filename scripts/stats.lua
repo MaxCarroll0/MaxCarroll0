@@ -209,6 +209,7 @@ local top = render_metric(top_g, "top", top_bd)
 local recent = render_metric(recent_g, "recent", recent_bd)
 local totals_md = render.totals({
   languages = top_g.count,
+  language_names = top_g.languages,
   lines = top_g.total,
   added = recent_g.total,
   repos = n_owned + n_ext,
