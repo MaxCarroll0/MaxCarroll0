@@ -64,7 +64,8 @@ private_label = "Private"
 # Languages are classified by GitHub Linguist's `type` (see lib/langgroups.lua).
 order = ["Programming", "Prose", "Configs / Data"]
 per_group = 12        # max languages shown per class; the rest fold into one "Other" row
-other_label = "Other"
+other_label = "Others"
+per_group_overrides = { "Prose" = 6, "Configs / Data" = 6 }
 
 [groups.overrides]
 "Nix" = "Configs / Data"
