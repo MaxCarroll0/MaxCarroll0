@@ -6,7 +6,7 @@ work_dir = "/tmp/loc-stats"
 emails = [
   "133233123+MaxCarroll0@users.noreply.github.com",
   "mjvcarroll@gmail.com",
-  "mjvcaroll@gmail.com", # typo variant, intentional
+  "mjvcaroll@gmail.com", # typo
 ]
 
 [owned]
@@ -18,8 +18,8 @@ include_archived = false
 [counting]
 blame_flags = "-w" # add "-M -C" to follow moved/copied lines
 dedupe_shared_history = true
-# Build/generated paths dropped from every metric (tokei --exclude globs). Repos are source-only (Nix builds
-# out-of-tree), so this is mostly a safety net; add committed generated files here if you want them out too.
+
+# (tokei --exclude globs)
 exclude = [
   "_build", "dist", "target", "node_modules", "vendor", ".dart_tool", "__pycache__",
   "*.min.js", "*.min.css", "*.pb.go", "*.g.dart", "*.freezed.dart",
@@ -33,17 +33,13 @@ days = 90
 hide = ["SVG", "Plain Text", "Autoconf"]
 
 [languages.merge]
-# tokei folds .re/.rei into OCaml; relabel to show both.
 "OCaml" = "OCaml/Reason"
-# fold tokei's header split and the bibliography sub-language into their parent
 "C Header" = "C"
 "C++ Header" = "C++"
 "BibTeX" = "TeX"
 
 [languages.urls]
-# Homepage links come from scripts/lib/langurls.lua (generated from DBpedia/Wikidata by gen-langurls.lua).
-# These per-display-name overrides win over it: data formats those sources lack a homepage for, plus
-# nicer targets than the generated ones (e.g. cppreference over the ISO paywall).
+# Overrides over scripts/lib/langurls.lua (generated from DBpedia/Wikidata by gen-langurls.lua).
 "C" = "https://en.cppreference.com/w/c"
 "C++" = "https://isocpp.org"
 "Org" = "https://orgmode.org"
@@ -57,7 +53,6 @@ hide = ["SVG", "Plain Text", "Autoconf"]
 "Edn" = "https://github.com/edn-format/edn"
 
 [breakdown]
-# Per-row dropdown: every private repo collapses into one row carrying this label.
 private_label = "Private"
 
 [groups]
@@ -69,7 +64,6 @@ per_group_overrides = { "Prose" = 6, "Configs / Data" = 6 }
 
 [groups.overrides]
 "Nix" = "Configs / Data"
-# e.g. move stylesheets out of Prose: "CSS" = "Configs / Data"
 
 [output]
 readme = "README.md"
