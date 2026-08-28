@@ -11,7 +11,7 @@
 | Metric           |   Value |
 | :--------------- | ------: |
 | Languages        |      52 |
-| Lines (all-time) | 249,037 |
+| Lines (all-time) | 249,036 |
 | Lines (90d)      | 161,686 |
 | Repositories     |      40 |
 
@@ -100,7 +100,7 @@
 
 <img src="assets/stack/top-prose.svg" alt="Prose">
 
-<details><summary><img src="assets/dot/e34c26.svg" width="10" height="10"> <code><a href="https://html.spec.whatwg.org/">HTML</a>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;32,518</code>&nbsp;<img src="assets/bar/e34c26-52.svg" height="11">&nbsp;<code>58.6%</code></summary>
+<details><summary><img src="assets/dot/e34c26.svg" width="10" height="10"> <code><a href="https://html.spec.whatwg.org/">HTML</a>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;32,518</code>&nbsp;<img src="assets/bar/e34c26-52.svg" height="11">&nbsp;<code>58.7%</code></summary>
 <table>
 <tr><td>Private</td><td align="right">32,458</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 99.8%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">46</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
@@ -115,12 +115,12 @@
 <tr><td><a href="https://github.com/MaxCarroll0/Formalised-Algebra">MaxCarroll0/Formalised-Algebra</a></td><td align="right">99</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.1%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nix-latex-template">MaxCarroll0/nix-latex-template</a></td><td align="right">10</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;&nbsp;7,409</code>&nbsp;<img src="assets/bar/083fa1-12.svg" height="11">&nbsp;<code>13.4%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;&nbsp;7,408</code>&nbsp;<img src="assets/bar/083fa1-12.svg" height="11">&nbsp;<code>13.4%</code></summary>
 <table>
 <tr><td>Private (10)</td><td align="right">4,095</td><td><img src="assets/bar/8b949e-49.svg" height="11"> 55.3%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">1,552</td><td><img src="assets/bar/8b949e-18.svg" height="11"> 20.9%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">1,552</td><td><img src="assets/bar/8b949e-18.svg" height="11"> 21.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">557</td><td><img src="assets/bar/8b949e-7.svg" height="11"> 7.5%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">423</td><td><img src="assets/bar/8b949e-5.svg" height="11"> 5.7%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">422</td><td><img src="assets/bar/8b949e-5.svg" height="11"> 5.7%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">182</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.5%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">122</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.6%</td></tr>
 <tr><td><a href="https://github.com/Extreme-Kayaking/kayak-hull-optimisation">Extreme-Kayaking/kayak-hull-optimisation</a></td><td align="right">100</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.3%</td></tr>
