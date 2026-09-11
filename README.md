@@ -11,8 +11,8 @@
 | Metric           |   Value |
 | :--------------- | ------: |
 | Languages        |      53 |
-| Lines (all-time) | 256,722 |
-| Lines (90d)      | 141,016 |
+| Lines (all-time) | 257,150 |
+| Lines (90d)      | 141,202 |
 | Repositories     |      41 |
 
 <sub><strong>Programming:</strong> <code>Agda</code>, <code>AWK</code>, <code>BASH</code>, <code>Batch</code>, <code>Bitbake</code>, <code>C</code>, <code>C#</code>, <code>C++</code>, <code>Cabal</code>, <code>Clojure</code>, <code>CMake</code>, <code>Common Lisp</code>, <code>Coq</code>, <code>Elixir</code>, <code>Emacs Lisp</code>, <code>F#</code>, <code>F*</code>, <code>Forge Config</code>, <code>fstar</code>, <code>Go</code>, <code>Haskell</code>, <code>Idris</code>, <code>Isabelle</code>, <code>Java</code>, <code>JavaScript</code>, <code>jq</code>, <code>Just</code>, <code>Kotlin</code>, <code>Lean</code>, <code>lean4</code>, <code>Lua</code>, <code>Makefile</code>, <code>MSBuild</code>, <code>OCaml/Reason</code>, <code>Perl</code>, <code>Python</code>, <code>Roc</code>, <code>Rust</code>, <code>Scala</code>, <code>Shell</code>, <code>TypeScript</code>, <code>Visual Studio Solution</code></sub><br>
@@ -100,18 +100,19 @@
 
 <img src="assets/stack/top-prose.svg" alt="Prose">
 
-<details><summary><img src="assets/dot/e34c26.svg" width="10" height="10"> <code><a href="https://html.spec.whatwg.org/">HTML</a>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;32,518</code>&nbsp;<img src="assets/bar/e34c26-49.svg" height="11">&nbsp;<code>55.6%</code></summary>
+<details><summary><img src="assets/dot/e34c26.svg" width="10" height="10"> <code><a href="https://html.spec.whatwg.org/">HTML</a>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;32,518</code>&nbsp;<img src="assets/bar/e34c26-49.svg" height="11">&nbsp;<code>55.2%</code></summary>
 <table>
 <tr><td>Private</td><td align="right">32,458</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 99.8%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">46</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">14</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;10,083</code>&nbsp;<img src="assets/bar/083fa1-15.svg" height="11">&nbsp;<code>17.2%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;10,325</code>&nbsp;<img src="assets/bar/083fa1-15.svg" height="11">&nbsp;<code>17.5%</code></summary>
 <table>
-<tr><td>Private (11)</td><td align="right">6,775</td><td><img src="assets/bar/8b949e-59.svg" height="11"> 67.2%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">1,552</td><td><img src="assets/bar/8b949e-14.svg" height="11"> 15.4%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">557</td><td><img src="assets/bar/8b949e-5.svg" height="11"> 5.5%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">417</td><td><img src="assets/bar/8b949e-4.svg" height="11"> 4.1%</td></tr>
+<tr><td>Private (11)</td><td align="right">6,775</td><td><img src="assets/bar/8b949e-58.svg" height="11"> 65.6%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">1,552</td><td><img src="assets/bar/8b949e-13.svg" height="11"> 15.0%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">557</td><td><img src="assets/bar/8b949e-5.svg" height="11"> 5.4%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">419</td><td><img src="assets/bar/8b949e-4.svg" height="11"> 4.1%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">240</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.3%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">182</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 1.8%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">122</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.2%</td></tr>
 <tr><td><a href="https://github.com/Extreme-Kayaking/kayak-hull-optimisation">Extreme-Kayaking/kayak-hull-optimisation</a></td><td align="right">100</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.0%</td></tr>
@@ -134,7 +135,7 @@
 <tr><td><a href="https://github.com/MaxCarroll0/Type-Error-Debugging-in-Hazel---Dissertation">MaxCarroll0/Type-Error-Debugging-in-Hazel---Dissertation</a></td><td align="right">2</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/bachelors-dissertation">MaxCarroll0/bachelors-dissertation</a></td><td align="right">2</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/3D6117.svg" width="10" height="10"> <code><a href="https://tug.org/">TeX</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;9,280</code>&nbsp;<img src="assets/bar/3D6117-14.svg" height="11">&nbsp;<code>15.9%</code></summary>
+<details><summary><img src="assets/dot/3D6117.svg" width="10" height="10"> <code><a href="https://tug.org/">TeX</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;9,280</code>&nbsp;<img src="assets/bar/3D6117-14.svg" height="11">&nbsp;<code>15.7%</code></summary>
 <table>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-tex">MaxCarroll0/polymorphic-type-slicing-tex</a></td><td align="right">3,698</td><td><img src="assets/bar/8b949e-35.svg" height="11"> 39.8%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Type-Error-Debugging-in-Hazel---Dissertation">MaxCarroll0/Type-Error-Debugging-in-Hazel---Dissertation</a></td><td align="right">3,173</td><td><img src="assets/bar/8b949e-30.svg" height="11"> 34.2%</td></tr>
@@ -149,11 +150,11 @@
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">1,632</td><td><img src="assets/bar/8b949e-26.svg" height="11"> 29.2%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">293</td><td><img src="assets/bar/8b949e-5.svg" height="11"> 5.2%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/77aa99.svg" width="10" height="10"> <code><a href="https://orgmode.org">Org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;1,060</code>&nbsp;<img src="assets/bar/77aa99-2.svg" height="11">&nbsp;<code>&nbsp;1.8%</code></summary>
+<details><summary><img src="assets/dot/77aa99.svg" width="10" height="10"> <code><a href="https://orgmode.org">Org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;1,246</code>&nbsp;<img src="assets/bar/77aa99-2.svg" height="11">&nbsp;<code>&nbsp;2.1%</code></summary>
 <table>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">635</td><td><img src="assets/bar/8b949e-53.svg" height="11"> 59.9%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">300</td><td><img src="assets/bar/8b949e-25.svg" height="11"> 28.3%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/Formalised-Algebra">MaxCarroll0/Formalised-Algebra</a></td><td align="right">125</td><td><img src="assets/bar/8b949e-10.svg" height="11"> 11.8%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">635</td><td><img src="assets/bar/8b949e-45.svg" height="11"> 51.0%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">486</td><td><img src="assets/bar/8b949e-34.svg" height="11"> 39.0%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/Formalised-Algebra">MaxCarroll0/Formalised-Algebra</a></td><td align="right">125</td><td><img src="assets/bar/8b949e-9.svg" height="11"> 10.0%</td></tr>
 </table></details>
 
 <img src="assets/stack/top-configs-data.svg" alt="Configs / Data">
@@ -288,18 +289,18 @@
 
 <img src="assets/stack/recent-prose.svg" alt="Prose">
 
-<details><summary><img src="assets/dot/e34c26.svg" width="10" height="10"> <code><a href="https://html.spec.whatwg.org/">HTML</a>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;29,601</code>&nbsp;<img src="assets/bar/e34c26-63.svg" height="11">&nbsp;<code>72.1%</code></summary>
+<details><summary><img src="assets/dot/e34c26.svg" width="10" height="10"> <code><a href="https://html.spec.whatwg.org/">HTML</a>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;29,601</code>&nbsp;<img src="assets/bar/e34c26-63.svg" height="11">&nbsp;<code>71.8%</code></summary>
 <table>
 <tr><td>Private</td><td align="right">29,556</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 99.8%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">45</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.2%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/663399.svg" width="10" height="10"> <code><a href="https://www.w3.org/Style/CSS/">CSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,535</code>&nbsp;<img src="assets/bar/663399-12.svg" height="11">&nbsp;<code>13.5%</code></summary>
+<details><summary><img src="assets/dot/663399.svg" width="10" height="10"> <code><a href="https://www.w3.org/Style/CSS/">CSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,535</code>&nbsp;<img src="assets/bar/663399-12.svg" height="11">&nbsp;<code>13.4%</code></summary>
 <table>
 <tr><td>Private</td><td align="right">3,662</td><td><img src="assets/bar/8b949e-58.svg" height="11"> 66.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">1,632</td><td><img src="assets/bar/8b949e-26.svg" height="11"> 29.5%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">241</td><td><img src="assets/bar/8b949e-4.svg" height="11"> 4.4%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;&nbsp;4,347</code>&nbsp;<img src="assets/bar/083fa1-9.svg" height="11">&nbsp;<code>10.6%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;&nbsp;4,347</code>&nbsp;<img src="assets/bar/083fa1-9.svg" height="11">&nbsp;<code>10.5%</code></summary>
 <table>
 <tr><td>Private (3)</td><td align="right">1,955</td><td><img src="assets/bar/8b949e-40.svg" height="11"> 45.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">1,606</td><td><img src="assets/bar/8b949e-33.svg" height="11"> 36.9%</td></tr>
@@ -316,11 +317,11 @@
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">6</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">3</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/77aa99.svg" width="10" height="10"> <code><a href="https://orgmode.org">Org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;886</code>&nbsp;<img src="assets/bar/77aa99-2.svg" height="11">&nbsp;<code>&nbsp;2.2%</code></summary>
+<details><summary><img src="assets/dot/77aa99.svg" width="10" height="10"> <code><a href="https://orgmode.org">Org</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;1,072</code>&nbsp;<img src="assets/bar/77aa99-2.svg" height="11">&nbsp;<code>&nbsp;2.6%</code></summary>
 <table>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">461</td><td><img src="assets/bar/8b949e-46.svg" height="11"> 52.0%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">300</td><td><img src="assets/bar/8b949e-30.svg" height="11"> 33.9%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/Formalised-Algebra">MaxCarroll0/Formalised-Algebra</a></td><td align="right">125</td><td><img src="assets/bar/8b949e-12.svg" height="11"> 14.1%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">486</td><td><img src="assets/bar/8b949e-40.svg" height="11"> 45.3%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">461</td><td><img src="assets/bar/8b949e-38.svg" height="11"> 43.0%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/Formalised-Algebra">MaxCarroll0/Formalised-Algebra</a></td><td align="right">125</td><td><img src="assets/bar/8b949e-10.svg" height="11"> 11.7%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/3D6117.svg" width="10" height="10"> <code><a href="https://tug.org/">TeX</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;673</code>&nbsp;<img src="assets/bar/3D6117-1.svg" height="11">&nbsp;<code>&nbsp;1.6%</code></summary>
 <table>
