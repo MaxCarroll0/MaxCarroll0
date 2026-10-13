@@ -12,7 +12,7 @@
 | :--------------- | -----: |
 | Languages        |      9 |
 | Lines (all-time) | 24,422 |
-| Lines (90d)      |  3,870 |
+| Lines (90d)      |  3,854 |
 | Repositories     |      2 |
 
 <sub><strong>Programming:</strong> <code>Just</code>, <code>Makefile</code>, <code>OCaml/Reason</code>, <code>Python</code>, <code>Shell</code></sub><br>
@@ -94,9 +94,9 @@
 
 <img src="assets/stack/recent-programming.svg" alt="Programming">
 
-<details><summary><img src="assets/dot/ef7a08.svg" width="10" height="10"> <code><a href="https://ocaml.org/">OCaml/Reason</a></code><code>&nbsp;&nbsp;3,857</code>&nbsp;<img src="assets/bar/ef7a08-88.svg" height="11">&nbsp;<code>100.0%</code></summary>
+<details><summary><img src="assets/dot/ef7a08.svg" width="10" height="10"> <code><a href="https://ocaml.org/">OCaml/Reason</a></code><code>&nbsp;&nbsp;3,841</code>&nbsp;<img src="assets/bar/ef7a08-88.svg" height="11">&nbsp;<code>100.0%</code></summary>
 <table>
-<tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">3,857</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
+<tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">3,841</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
 
 </td>
