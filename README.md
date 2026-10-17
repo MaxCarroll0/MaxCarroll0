@@ -12,7 +12,7 @@
 | :--------------- | -----: |
 | Languages        |      9 |
 | Lines (all-time) | 24,422 |
-| Lines (90d)      |  3,850 |
+| Lines (90d)      |  3,811 |
 | Repositories     |      2 |
 
 <sub><strong>Programming:</strong> <code>Just</code>, <code>Makefile</code>, <code>OCaml/Reason</code>, <code>Python</code>, <code>Shell</code></sub><br>
@@ -94,19 +94,9 @@
 
 <img src="assets/stack/recent-programming.svg" alt="Programming">
 
-<details><summary><img src="assets/dot/ef7a08.svg" width="10" height="10"> <code><a href="https://ocaml.org/">OCaml/Reason</a></code><code>&nbsp;&nbsp;3,837</code>&nbsp;<img src="assets/bar/ef7a08-88.svg" height="11">&nbsp;<code>100.0%</code></summary>
+<details><summary><img src="assets/dot/ef7a08.svg" width="10" height="10"> <code><a href="https://ocaml.org/">OCaml/Reason</a></code><code>&nbsp;&nbsp;3,811</code>&nbsp;<img src="assets/bar/ef7a08-88.svg" height="11">&nbsp;<code>100.0%</code></summary>
 <table>
-<tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">3,837</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
-</table></details>
-
-</td>
-<td valign="top">
-
-<img src="assets/stack/recent-prose.svg" alt="Prose">
-
-<details><summary><img src="assets/dot/663399.svg" width="10" height="10"> <code><a href="https://www.w3.org/Style/CSS/">CSS</a></code><code>&nbsp;&nbsp;13</code>&nbsp;<img src="assets/bar/663399-88.svg" height="11">&nbsp;<code>100.0%</code></summary>
-<table>
-<tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">13</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
+<tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">3,811</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
 
 </td>
