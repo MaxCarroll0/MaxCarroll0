@@ -14,8 +14,8 @@ local function url(owner, name, token)
 end
 
 local function clone(flags, u, dir)
-  local _, code = util.run(("%s %s %s %s 2>/dev/null"):format(CLONE, flags, util.shq(u), util.shq(dir)))
-  return code
+  local _, code, errtext = util.run_err(("%s %s %s %s"):format(CLONE, flags, util.shq(u), util.shq(dir)))
+  return code, errtext
 end
 
 local function add_worktree(maindir, wt, rev)
@@ -33,8 +33,9 @@ function repos.prepare_owned(repo, token, root, recent_days)
   local u = url(repo.owner, repo.name, token)
   if clone("--single-branch --shallow-since=" .. util.shq(since .. " days ago"), u, dir) ~= 0 then
     util.rimraf(dir)
-    if clone("--single-branch --depth 1", u, dir) ~= 0 then
-      return nil, "clone failed: " .. repo.owner .. "/" .. repo.name
+    local code, errtext = clone("--single-branch --depth 1", u, dir)
+    if code ~= 0 then
+      return nil, ("clone failed: %s/%s: %s"):format(repo.owner, repo.name, errtext)
     end
   end
   return { path = dir }
@@ -44,8 +45,9 @@ end
 function repos.prepare_external(owner, name, refs, token, root)
   local maindir = root .. "/ext/" .. owner .. "__" .. name
   util.rimraf(maindir)
-  if clone("", url(owner, name, token), maindir) ~= 0 then
-    return nil, "clone failed: " .. owner .. "/" .. name
+  local code, errtext = clone("", url(owner, name, token), maindir)
+  if code ~= 0 then
+    return nil, ("clone failed: %s/%s: %s"):format(owner, name, errtext)
   end
 
   local units = {}

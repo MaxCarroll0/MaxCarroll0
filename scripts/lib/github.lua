@@ -7,9 +7,10 @@ local github = {}
 
 function github.owned_repos(opts)
   local q = "/user/repos?affiliation=owner&visibility=" .. (opts.visibility or "all") .. "&per_page=100"
-  local out, code = util.run("gh api --paginate --slurp " .. util.shq(q) .. " 2>/dev/null")
+  local out, code, errtext = util.run_err("gh api --paginate --slurp " .. util.shq(q))
   if not out or out == "" or code ~= 0 then
-    return nil, "gh api failed (code " .. code .. "); check GH_TOKEN / gh auth"
+    local why = (errtext ~= "" and errtext) or "no output and no error text"
+    return nil, ("gh api failed (code %d): %s"):format(code, why)
   end
 
   local pages, err = json.safe_decode(out, "gh api")

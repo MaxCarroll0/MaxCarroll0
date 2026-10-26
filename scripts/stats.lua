@@ -47,7 +47,7 @@ local alltime, recent = {}, {}
 local top_contrib, recent_contrib = {}, {} -- lang -> repo label -> lines, for the per-row dropdowns
 local is_private = {} -- repo label -> bool
 local seen = {}
-local n_owned, n_ext = 0, 0
+local n_owned, n_ext, n_discovered = 0, 0, 0
 
 local function add_contrib(store, lang, label, n)
   if n <= 0 then
@@ -68,8 +68,9 @@ if config.owned.enabled and selected("owned") then
   util.log("== owned repos (tokei wholesale) ==")
   local list, err = github.owned_repos(config.owned)
   if not list then
-    util.log("! owned discovery failed: %s", err or "?")
+    error("owned discovery failed: " .. (err or "?"))
   else
+    n_discovered = #list
     util.log("discovered %d owned repo(s)", #list)
     for _, r in ipairs(list) do
       if selected(r.full_name or r.name) then
@@ -117,6 +118,10 @@ if config.owned.enabled and selected("owned") then
       end
     end
   end
+end
+
+if n_discovered > 0 and n_owned == 0 and not opts.only then
+  error(("every owned repo failed: %d discovered, 0 counted"):format(n_discovered))
 end
 
 util.log("== external repos (blame attribution) ==")

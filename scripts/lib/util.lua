@@ -20,6 +20,18 @@ function util.run(cmd)
   return out, ok and 0 or (code or 1)
 end
 
+function util.run_err(cmd)
+  local errfile = os.tmpname()
+  local out, code = util.run(cmd .. " 2>" .. util.shq(errfile))
+  local fh = io.open(errfile, "r")
+  local errtext = fh and fh:read("a") or ""
+  if fh then
+    fh:close()
+  end
+  os.remove(errfile)
+  return out, code, (errtext:gsub("%s+$", ""))
+end
+
 function util.rimraf(path)
   os.execute("rm -rf -- " .. util.shq(path))
 end
