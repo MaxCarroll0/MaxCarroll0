@@ -11,7 +11,7 @@
 | Metric           |   Value |
 | :--------------- | ------: |
 | Languages        |      56 |
-| Lines (all-time) | 383,857 |
+| Lines (all-time) | 383,855 |
 | Lines (90d)      | 163,569 |
 | Repositories     |      46 |
 
@@ -109,12 +109,12 @@
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">46</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">14</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;25,964</code>&nbsp;<img src="assets/bar/083fa1-28.svg" height="11">&nbsp;<code>32.2%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;25,962</code>&nbsp;<img src="assets/bar/083fa1-28.svg" height="11">&nbsp;<code>32.2%</code></summary>
 <table>
 <tr><td>Private (14)</td><td align="right">20,581</td><td><img src="assets/bar/8b949e-70.svg" height="11"> 79.3%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">3,372</td><td><img src="assets/bar/8b949e-11.svg" height="11"> 13.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">557</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.1%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">412</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.6%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">410</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.6%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">260</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">182</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 0.7%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">122</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.5%</td></tr>
