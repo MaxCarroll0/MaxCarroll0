@@ -12,7 +12,7 @@
 | :--------------- | ------: |
 | Languages        |      56 |
 | Lines (all-time) | 383,855 |
-| Lines (90d)      | 163,569 |
+| Lines (90d)      | 163,493 |
 | Repositories     |      46 |
 
 <sub><strong>Programming:</strong> <code>Agda</code>, <code>AWK</code>, <code>BASH</code>, <code>Batch</code>, <code>Bitbake</code>, <code>C</code>, <code>C#</code>, <code>C++</code>, <code>Cabal</code>, <code>Clojure</code>, <code>CMake</code>, <code>Common Lisp</code>, <code>Coq</code>, <code>Elixir</code>, <code>Emacs Lisp</code>, <code>F#</code>, <code>F*</code>, <code>Forge Config</code>, <code>fstar</code>, <code>Go</code>, <code>Haskell</code>, <code>Idris</code>, <code>Isabelle</code>, <code>Java</code>, <code>JavaScript</code>, <code>jq</code>, <code>Just</code>, <code>Kotlin</code>, <code>Lean</code>, <code>lean4</code>, <code>Lua</code>, <code>Makefile</code>, <code>MSBuild</code>, <code>OCaml/Reason</code>, <code>Perl</code>, <code>Python</code>, <code>QML</code>, <code>Roc</code>, <code>Rust</code>, <code>Scala</code>, <code>Shell</code>, <code>TypeScript</code>, <code>Visual Studio Solution</code></sub><br>
@@ -321,14 +321,14 @@
 
 <img src="assets/stack/recent-configs-data.svg" alt="Configs / Data">
 
-<details><summary><img src="assets/dot/292929.svg" width="10" height="10"> <code><a href="https://www.json.org">JSON</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;39,599</code>&nbsp;<img src="assets/bar/292929-43.svg" height="11">&nbsp;<code>49.3%</code></summary>
+<details><summary><img src="assets/dot/292929.svg" width="10" height="10"> <code><a href="https://www.json.org">JSON</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;39,599</code>&nbsp;<img src="assets/bar/292929-43.svg" height="11">&nbsp;<code>49.4%</code></summary>
 <table>
 <tr><td>Private (3)</td><td align="right">39,558</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 99.9%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">41</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/7e7eff.svg" width="10" height="10"> <code><a href="https://nixos.org">Nix</a>&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;20,563</code>&nbsp;<img src="assets/bar/7e7eff-23.svg" height="11">&nbsp;<code>25.6%</code></summary>
+<details><summary><img src="assets/dot/7e7eff.svg" width="10" height="10"> <code><a href="https://nixos.org">Nix</a>&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;20,517</code>&nbsp;<img src="assets/bar/7e7eff-23.svg" height="11">&nbsp;<code>25.6%</code></summary>
 <table>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">19,428</td><td><img src="assets/bar/8b949e-83.svg" height="11"> 94.5%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">19,382</td><td><img src="assets/bar/8b949e-83.svg" height="11"> 94.5%</td></tr>
 <tr><td>Private (3)</td><td align="right">999</td><td><img src="assets/bar/8b949e-4.svg" height="11"> 4.9%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">136</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 0.7%</td></tr>
 </table></details>
@@ -342,10 +342,10 @@
 <table>
 <tr><td>Private</td><td align="right">4,966</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/cb171e.svg" width="10" height="10"> <code><a href="https://yaml.org">YAML</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;1,050</code>&nbsp;<img src="assets/bar/cb171e-1.svg" height="11">&nbsp;<code>&nbsp;1.3%</code></summary>
+<details><summary><img src="assets/dot/cb171e.svg" width="10" height="10"> <code><a href="https://yaml.org">YAML</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;1,020</code>&nbsp;<img src="assets/bar/cb171e-1.svg" height="11">&nbsp;<code>&nbsp;1.3%</code></summary>
 <table>
-<tr><td>Private</td><td align="right">740</td><td><img src="assets/bar/8b949e-62.svg" height="11"> 70.5%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">310</td><td><img src="assets/bar/8b949e-26.svg" height="11"> 29.5%</td></tr>
+<tr><td>Private</td><td align="right">740</td><td><img src="assets/bar/8b949e-64.svg" height="11"> 72.5%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">280</td><td><img src="assets/bar/8b949e-24.svg" height="11"> 27.5%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/d1dbe0.svg" width="10" height="10"> <code>INI&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;620</code>&nbsp;<img src="assets/bar/d1dbe0-1.svg" height="11">&nbsp;<code>&nbsp;0.8%</code></summary>
 <table>
