@@ -11,8 +11,8 @@
 | Metric           |     Value |
 | :--------------- | --------: |
 | Languages        |        56 |
-| Lines (all-time) | 1,032,745 |
-| Lines (90d)      |   813,265 |
+| Lines (all-time) | 1,032,821 |
+| Lines (90d)      |   813,252 |
 | Repositories     |        47 |
 
 <sub><strong>Programming:</strong> <code>Agda</code>, <code>AWK</code>, <code>BASH</code>, <code>Batch</code>, <code>Bitbake</code>, <code>C</code>, <code>C#</code>, <code>C++</code>, <code>Cabal</code>, <code>Clojure</code>, <code>CMake</code>, <code>Common Lisp</code>, <code>Coq</code>, <code>Elixir</code>, <code>Emacs Lisp</code>, <code>F#</code>, <code>F*</code>, <code>Forge Config</code>, <code>fstar</code>, <code>Go</code>, <code>Haskell</code>, <code>Idris</code>, <code>Isabelle</code>, <code>Java</code>, <code>JavaScript</code>, <code>jq</code>, <code>Just</code>, <code>Kotlin</code>, <code>Lean</code>, <code>lean4</code>, <code>Lua</code>, <code>Makefile</code>, <code>MSBuild</code>, <code>OCaml/Reason</code>, <code>Perl</code>, <code>Python</code>, <code>QML</code>, <code>Roc</code>, <code>Rust</code>, <code>Scala</code>, <code>Shell</code>, <code>TypeScript</code>, <code>Visual Studio Solution</code></sub><br>
@@ -31,9 +31,9 @@
 
 <img src="assets/stack/top-programming.svg" alt="Programming">
 
-<details><summary><img src="assets/dot/3572A5.svg" width="10" height="10"> <code><a href="https://www.python.org/">Python</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;47,967</code>&nbsp;<img src="assets/bar/3572A5-16.svg" height="11">&nbsp;<code>18.6%</code></summary>
+<details><summary><img src="assets/dot/3572A5.svg" width="10" height="10"> <code><a href="https://www.python.org/">Python</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;48,007</code>&nbsp;<img src="assets/bar/3572A5-16.svg" height="11">&nbsp;<code>18.6%</code></summary>
 <table>
-<tr><td>Private (5)</td><td align="right">38,318</td><td><img src="assets/bar/8b949e-70.svg" height="11"> 79.9%</td></tr>
+<tr><td>Private (5)</td><td align="right">38,358</td><td><img src="assets/bar/8b949e-70.svg" height="11"> 79.9%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">8,800</td><td><img src="assets/bar/8b949e-16.svg" height="11"> 18.3%</td></tr>
 <tr><td><a href="https://github.com/Extreme-Kayaking/kayak-hull-optimisation">Extreme-Kayaking/kayak-hull-optimisation</a></td><td align="right">849</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 1.8%</td></tr>
 </table></details>
@@ -77,7 +77,7 @@
 <table>
 <tr><td>Private (3)</td><td align="right">13,019</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/c065db.svg" width="10" height="10"> <code><a href="https://www.gnu.org/software/emacs/">Emacs Lisp</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;8,389</code>&nbsp;<img src="assets/bar/c065db-3.svg" height="11">&nbsp;<code>&nbsp;3.3%</code></summary>
+<details><summary><img src="assets/dot/c065db.svg" width="10" height="10"> <code><a href="https://www.gnu.org/software/emacs/">Emacs Lisp</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;8,389</code>&nbsp;<img src="assets/bar/c065db-3.svg" height="11">&nbsp;<code>&nbsp;3.2%</code></summary>
 <table>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">8,362</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 99.7%</td></tr>
 <tr><td>Private</td><td align="right">16</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.2%</td></tr>
@@ -91,9 +91,9 @@
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">789</td><td><img src="assets/bar/8b949e-10.svg" height="11"> 11.5%</td></tr>
 <tr><td>Private (2)</td><td align="right">86</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.3%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/3178c6.svg" width="10" height="10"> <code><a href="https://www.typescriptlang.org">TypeScript</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,184</code>&nbsp;<img src="assets/bar/3178c6-2.svg" height="11">&nbsp;<code>&nbsp;2.0%</code></summary>
+<details><summary><img src="assets/dot/3178c6.svg" width="10" height="10"> <code><a href="https://www.typescriptlang.org">TypeScript</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,229</code>&nbsp;<img src="assets/bar/3178c6-2.svg" height="11">&nbsp;<code>&nbsp;2.0%</code></summary>
 <table>
-<tr><td>Private (2)</td><td align="right">5,184</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
+<tr><td>Private (2)</td><td align="right">5,229</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
 <img src="assets/dot/8b949e.svg" width="10" height="10"> <code>Others&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;22,212</code>&nbsp;<img src="assets/bar/8b949e-8.svg" height="11">&nbsp;<code>&nbsp;8.6%</code><br>
 
@@ -108,12 +108,12 @@
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">46</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">14</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;25,826</code>&nbsp;<img src="assets/bar/083fa1-28.svg" height="11">&nbsp;<code>31.8%</code></summary>
+<details><summary><img src="assets/dot/083fa1.svg" width="10" height="10"> <code><a href="https://commonmark.org">Markdown</a></code><code>&nbsp;&nbsp;25,817</code>&nbsp;<img src="assets/bar/083fa1-28.svg" height="11">&nbsp;<code>31.8%</code></summary>
 <table>
-<tr><td>Private (15)</td><td align="right">20,466</td><td><img src="assets/bar/8b949e-70.svg" height="11"> 79.2%</td></tr>
+<tr><td>Private (15)</td><td align="right">20,466</td><td><img src="assets/bar/8b949e-70.svg" height="11"> 79.3%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">3,349</td><td><img src="assets/bar/8b949e-11.svg" height="11"> 13.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0.github.io">MaxCarroll0/MaxCarroll0.github.io</a></td><td align="right">557</td><td><img src="assets/bar/8b949e-2.svg" height="11"> 2.2%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">412</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.6%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/MaxCarroll0">MaxCarroll0/MaxCarroll0</a></td><td align="right">403</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.6%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">260</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/polymorphic-type-slicing-mechanisation">MaxCarroll0/polymorphic-type-slicing-mechanisation</a></td><td align="right">182</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 0.7%</td></tr>
 <tr><td><a href="https://github.com/hazelgrove/hazel">hazelgrove/hazel</a></td><td align="right">122</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.5%</td></tr>
@@ -228,9 +228,9 @@
 
 <img src="assets/stack/recent-programming.svg" alt="Programming">
 
-<details><summary><img src="assets/dot/3572A5.svg" width="10" height="10"> <code><a href="https://www.python.org/">Python</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;45,345</code>&nbsp;<img src="assets/bar/3572A5-37.svg" height="11">&nbsp;<code>41.8%</code></summary>
+<details><summary><img src="assets/dot/3572A5.svg" width="10" height="10"> <code><a href="https://www.python.org/">Python</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;45,385</code>&nbsp;<img src="assets/bar/3572A5-37.svg" height="11">&nbsp;<code>41.8%</code></summary>
 <table>
-<tr><td>Private (2)</td><td align="right">37,676</td><td><img src="assets/bar/8b949e-73.svg" height="11"> 83.1%</td></tr>
+<tr><td>Private (2)</td><td align="right">37,716</td><td><img src="assets/bar/8b949e-73.svg" height="11"> 83.1%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">7,669</td><td><img src="assets/bar/8b949e-15.svg" height="11"> 16.9%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/5e5086.svg" width="10" height="10"> <code><a href="https://www.haskell.org">Haskell</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;21,787</code>&nbsp;<img src="assets/bar/5e5086-18.svg" height="11">&nbsp;<code>20.1%</code></summary>
@@ -245,9 +245,9 @@
 <table>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">6,957</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/3178c6.svg" width="10" height="10"> <code><a href="https://www.typescriptlang.org">TypeScript</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,150</code>&nbsp;<img src="assets/bar/3178c6-4.svg" height="11">&nbsp;<code>&nbsp;4.8%</code></summary>
+<details><summary><img src="assets/dot/3178c6.svg" width="10" height="10"> <code><a href="https://www.typescriptlang.org">TypeScript</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,195</code>&nbsp;<img src="assets/bar/3178c6-4.svg" height="11">&nbsp;<code>&nbsp;4.8%</code></summary>
 <table>
-<tr><td>Private</td><td align="right">5,150</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
+<tr><td>Private</td><td align="right">5,195</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/44a51c.svg" width="10" height="10"> <code><a href="https://doc.qt.io/qt-6/qmlreference.html">QML</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;5,011</code>&nbsp;<img src="assets/bar/44a51c-4.svg" height="11">&nbsp;<code>&nbsp;4.6%</code></summary>
 <table>
@@ -315,7 +315,7 @@
 
 <img src="assets/stack/recent-configs-data.svg" alt="Configs / Data">
 
-<details><summary><img src="assets/dot/292929.svg" width="10" height="10"> <code><a href="https://www.json.org">JSON</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;641,585</code>&nbsp;<img src="assets/bar/292929-84.svg" height="11">&nbsp;<code>95.2%</code></summary>
+<details><summary><img src="assets/dot/292929.svg" width="10" height="10"> <code><a href="https://www.json.org">JSON</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;641,585</code>&nbsp;<img src="assets/bar/292929-84.svg" height="11">&nbsp;<code>95.3%</code></summary>
 <table>
 <tr><td>Private (4)</td><td align="right">641,558</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">27</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.0%</td></tr>
@@ -325,9 +325,9 @@
 <tr><td>Private (4)</td><td align="right">13,288</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 99.9%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">15</td><td><img src="assets/bar/8b949e-0.svg" height="11"> 0.1%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/7e7eff.svg" width="10" height="10"> <code><a href="https://nixos.org">Nix</a>&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;11,323</code>&nbsp;<img src="assets/bar/7e7eff-1.svg" height="11">&nbsp;<code>&nbsp;1.7%</code></summary>
+<details><summary><img src="assets/dot/7e7eff.svg" width="10" height="10"> <code><a href="https://nixos.org">Nix</a>&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;11,289</code>&nbsp;<img src="assets/bar/7e7eff-1.svg" height="11">&nbsp;<code>&nbsp;1.7%</code></summary>
 <table>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">8,789</td><td><img src="assets/bar/8b949e-68.svg" height="11"> 77.6%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">8,755</td><td><img src="assets/bar/8b949e-68.svg" height="11"> 77.6%</td></tr>
 <tr><td>Private (5)</td><td align="right">2,398</td><td><img src="assets/bar/8b949e-19.svg" height="11"> 21.2%</td></tr>
 <tr><td><a href="https://github.com/MaxCarroll0/Bidirectional-Type-Slicing-POPL">MaxCarroll0/Bidirectional-Type-Slicing-POPL</a></td><td align="right">136</td><td><img src="assets/bar/8b949e-1.svg" height="11"> 1.2%</td></tr>
 </table></details>
@@ -335,10 +335,10 @@
 <table>
 <tr><td>Private</td><td align="right">5,332</td><td><img src="assets/bar/8b949e-88.svg" height="11"> 100.0%</td></tr>
 </table></details>
-<details><summary><img src="assets/dot/cb171e.svg" width="10" height="10"> <code><a href="https://yaml.org">YAML</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;952</code>&nbsp;<img src="assets/bar/cb171e-0.svg" height="11">&nbsp;<code>&nbsp;0.1%</code></summary>
+<details><summary><img src="assets/dot/cb171e.svg" width="10" height="10"> <code><a href="https://yaml.org">YAML</a>&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;888</code>&nbsp;<img src="assets/bar/cb171e-0.svg" height="11">&nbsp;<code>&nbsp;0.1%</code></summary>
 <table>
-<tr><td>Private (2)</td><td align="right">744</td><td><img src="assets/bar/8b949e-69.svg" height="11"> 78.2%</td></tr>
-<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">208</td><td><img src="assets/bar/8b949e-19.svg" height="11"> 21.8%</td></tr>
+<tr><td>Private (2)</td><td align="right">744</td><td><img src="assets/bar/8b949e-74.svg" height="11"> 83.8%</td></tr>
+<tr><td><a href="https://github.com/MaxCarroll0/nixOS-config">MaxCarroll0/nixOS-config</a></td><td align="right">144</td><td><img src="assets/bar/8b949e-14.svg" height="11"> 16.2%</td></tr>
 </table></details>
 <details><summary><img src="assets/dot/d1dbe0.svg" width="10" height="10"> <code>INI&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;620</code>&nbsp;<img src="assets/bar/d1dbe0-0.svg" height="11">&nbsp;<code>&nbsp;0.1%</code></summary>
 <table>
