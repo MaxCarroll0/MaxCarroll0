@@ -24,6 +24,7 @@ exclude = [
   "_build", "dist", "target", "node_modules", "vendor", ".dart_tool", "__pycache__",
   "*.min.js", "*.min.css", "*.pb.go", "*.g.dart", "*.freezed.dart",
   "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "Cargo.lock",
+  "syllabus_data", "**/home/minecraft",
 ]
 
 [recent]
